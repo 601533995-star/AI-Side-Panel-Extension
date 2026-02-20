@@ -1,4 +1,5 @@
-name: Create GitHub Release (Manual)
+name: AI Side Panel — Manual Release
+run-name: "AI Side Panel Release ${{ github.event.inputs.tag }}"
 
 # This workflow is a manual fallback.
 # Normal releases are created automatically by auto-tag.yml when

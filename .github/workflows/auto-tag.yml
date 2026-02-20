@@ -1,4 +1,5 @@
-name: Auto Tag and Release on Version Bump
+name: AI Side Panel main
+run-name: "AI Side Panel ${{ github.event.head_commit.message }}"
 
 on:
   push:
