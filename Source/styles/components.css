@@ -385,6 +385,7 @@ input:checked + .slider:before {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -444,4 +445,35 @@ input:checked + .slider:before {
 .custom-service-open-mode {
   align-items: flex-start;
   margin: 8px 0 4px;
+}
+
+/* ── Shortcut section layout (inline styles removed from HTML) ── */
+.shortcut-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shortcut-header h3 {
+  margin: 0;
+}
+
+#manage-shortcuts-all {
+  margin-left: 12px;
+}
+
+.shortcut-item > span {
+  margin-right: 10px;
+}
+
+/* Subtle helper text variant */
+.shortcut-info--subtle {
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+/* Initially hidden containers — shown/hidden by JS via element.style.display */
+#synthwave-dim-container,
+#conversation-hub-premium-teaser {
+  display: none;
 }

@@ -5,88 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Side Panel</title>
     <link rel="stylesheet" href="sidepanel-modular.css" />
+    <style>
+      /* ── Onboarding overlay ──────────────────────────────── */
+      #onboarding-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #0f0f0f;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        overflow: hidden;
+      }
+      #onboarding-overlay.visible {
+        display: flex;
+        opacity: 1;
+      }
+      #onboarding-overlay iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        flex: 1;
+      }
+      /* ── Show-tour button in settings ────────────────────── */
+      .onboarding-tour-btn {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: 100%;
+        padding: 10px 14px;
+        margin: 4px 0 0;
+        border: 1.5px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        background: transparent;
+        font-size: 13px;
+        font-weight: 500;
+        color: #a0a0a0;
+        cursor: pointer;
+        font-family: inherit;
+        transition: border-color 0.2s, background 0.2s, color 0.2s;
+        text-align: left;
+      }
+      .onboarding-tour-btn:hover {
+        border-color: #00ffaa;
+        background: rgba(0,255,170,0.07);
+        color: #00ffaa;
+      }
+      .onboarding-tour-btn:hover svg { color: #00ffaa; }
+      .onboarding-tour-btn svg {
+        width: 15px;
+        height: 15px;
+        color: #555555;
+        flex-shrink: 0;
+        transition: color 0.2s;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
+      <!-- ░░ ONBOARDING OVERLAY — shown on first launch ░░ -->
+      <div id="onboarding-overlay" role="dialog" aria-modal="true" aria-label="Welcome tour">
+        <iframe id="onboarding-frame" src="onboarding.html" title="Welcome tour"
+          sandbox="allow-scripts"></iframe>
+      </div>
+
       <nav class="toolbar" id="toolbar">
         <button class="btn" data-url="https://chatgpt.com/"
           draggable="true">
-          <img src="logos/chatgpt.svg" alt="ChatGPT Icon"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/chatgpt.svg" alt="ChatGPT Icon" class="icon-invert" />
           <span>ChatGPT</span>
         </button>
         <button class="btn" data-url="https://gemini.google.com/"
           draggable="true">
-          <img src="logos/gemini.svg" alt="Gemini Icon" draggable="false"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/gemini.svg" alt="Gemini Icon" draggable="false" />
           <span>Gemini</span>
         </button>
         <button class="btn" data-url="https://claude.ai/new" draggable="true">
-          <img src="logos/claude.svg" alt="Claude Icon" draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/claude.svg" alt="Claude Icon" draggable="true" />
           <span>Claude</span>
         </button>
         <button class="btn" data-url="https://copilot.microsoft.com/"
           draggable="true">
-          <img src="logos/copilot.svg" alt="Copilot Icon" draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/copilot.svg" alt="Copilot Icon" draggable="true" />
           <span>Copilot</span>
         </button>
         <button class="btn" data-url="https://chat.deepseek.com/"
           draggable="true">
-          <img src="logos/deepseek.svg" alt="ChatGPT Icon" draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/deepseek.svg" alt="DeepSeek Icon" draggable="true" />
           <span>DeepSeek</span>
         </button>
         <button class="btn" data-url="https://grok.com/"
           draggable="true">
-          <img src="logos/grok.svg" alt="Grok Icon" draggable="true"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/grok.svg" alt="Grok Icon" draggable="true" class="icon-invert" />
           <span>Grok</span>
         </button>
         <button class="btn" data-url="https://chat.mistral.ai/chat"
           draggable="true">
-          <img src="logos/mistral.svg" alt="Mistral Icon" draggable="true"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/mistral.svg" alt="Mistral Icon" draggable="true" class="icon-invert" />
           <span>Mistral</span>
         </button>
         <button class="btn" data-url="https://www.perplexity.ai/discover"
           draggable="true">
-          <img src="logos/perplexity.svg" alt="Perplexity Icon" draggable="true"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/perplexity.svg" alt="Perplexity Icon" draggable="true" class="icon-invert" />
           <span>Perplexity</span>
         </button>
         <button class="btn" data-url="https://chat.qwen.ai/"
           draggable="true">
-          <img src="logos/qwen.svg" alt="Qwen Icon" draggable="true"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/qwen.svg" alt="Qwen Icon" draggable="true" class="icon-invert" />
           <span>Qwen</span>
         </button>
         <button class="btn" data-url="https://www.kimi.com"
           draggable="true">
-          <img src="logos/kimi.svg" alt="Kimi Icon" draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/kimi.svg" alt="Kimi Icon" draggable="true" />
           <span>Kimi</span>
         </button>
         <button class="btn" data-url="https://chat.z.ai/"
           draggable="true">
-          <img src="logos/zai.svg" alt="Z AI Icon"
-            draggable="true"
-            style="flex:none;line-height:1; filter: brightness(0) invert(1); width: 20px; height: 20px;" />
+          <img src="logos/zai.svg" alt="Z AI Icon" draggable="true" class="icon-invert" />
           <span>Z AI</span>
         </button>
         <button class="btn" data-url="https://notebooklm.google.com/"
           draggable="true">
-          <img src="logos/notebooklm.svg" alt="NotebookLM Icon"
-            draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/notebooklm.svg" alt="NotebookLM Icon" draggable="true" />
           <span>NotebookLM</span>
         </button>
         <button class="btn" data-url="https://aistudio.google.com/app/library"
           draggable="true">
-          <img src="logos/aistudio.svg" alt="AI Studio Icon"
-            draggable="true"
-            style="flex:none;line-height:1; width: 20px; height: 20px;" />
+          <img src="logos/aistudio.svg" alt="AI Studio Icon" draggable="true" />
           <span>AI Studio</span>
         </button>
         <div id="custom-buttons-container"></div>
@@ -101,7 +146,7 @@
           </svg>
           <span data-i18n="splitView"></span>
         </button>
-        <button class="btn settings-btn" id="support-btn">
+        <button class="btn settings-btn" id="support-btn" title="Settings">
           <svg
             xmlns="http://www.w3.org/2000/svg" draggable="true"
             fill="#e8eaed"
@@ -116,6 +161,7 @@
         <div class="loading-spinner"></div>
         <iframe
           id="main-iframe"
+          title="AI Service Frame"
           frameborder="0"
           allow="clipboard-read; clipboard-write"
           sandbox="allow-scripts allow-forms allow-same-origin allow-downloads allow-popups"></iframe>
@@ -160,20 +206,30 @@
             </div>
           </div>
 
+                    <!-- ── Feature tour trigger ─────────────────────────────── -->
+          <button id="show-onboarding-btn" class="onboarding-tour-btn" type="button">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="8" r="6.5"/>
+              <path d="M8 7.5v4"/>
+              <circle cx="8" cy="5.5" r=".6" fill="currentColor" stroke="none"/>
+            </svg>
+            Show feature tour
+          </button>
+
           <!-- Customize Navigation Section -->
           <div class="toggle-container" id="customize-navigation-section">
             <h3 data-i18n="customizeNavigation"></h3>
             <div class="toggle-item">
               <span data-i18n="splitView"></span>
               <label class="switch">
-                <input type="checkbox" id="toggle-split-view" checked>
+                <input type="checkbox" id="toggle-split-view" aria-label="Split View" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Content Extractor</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-content-extractor" checked>
+                <input type="checkbox" id="toggle-content-extractor" aria-label="Content Extractor" checked>
                 <span class="slider"></span>
               </label>
             </div>
@@ -181,7 +237,7 @@
               <span data-i18n="scrollbarAlwaysVisible">Scrollbar Always
                 Visible</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-scrollbar-always-visible"
+                <input type="checkbox" id="toggle-scrollbar-always-visible" aria-label="Scrollbar Always Visible"
                   checked>
                 <span class="slider"></span>
               </label>
@@ -190,14 +246,14 @@
               <span data-i18n="rememberLastModel">Remember last selected
                 model</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-remember-last-model">
+                <input type="checkbox" id="toggle-remember-last-model" aria-label="Remember last selected model">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span data-i18n="promptHistoryViewer">Prompt History Viewer</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-prompt-history-viewer"
+                <input type="checkbox" id="toggle-prompt-history-viewer" aria-label="Prompt History Viewer"
                   checked>
                 <span class="slider"></span>
               </label>
@@ -205,7 +261,7 @@
             <div class="toggle-item">
               <span data-i18n="conversationHubToggle">Conversation Hub</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-conversation-hub" checked>
+                <input type="checkbox" id="toggle-conversation-hub" aria-label="Conversation Hub" checked>
                 <span class="slider"></span>
               </label>
             </div>
@@ -217,7 +273,7 @@
             <div class="add-link-form">
               <input type="text" id="custom-link-input"
                 placeholder="Enter URL" />
-              <button id="add-link-btn" data-i18n="add"></button>
+              <button id="add-link-btn" title="Add link" data-i18n="add"></button>
             </div>
             <div id="custom-links-list"></div>
           </div>
@@ -228,91 +284,91 @@
             <div class="toggle-item">
               <span>ChatGPT</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-chatgpt" checked>
+                <input type="checkbox" id="toggle-chatgpt" aria-label="ChatGPT" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Gemini</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-gemini" checked>
+                <input type="checkbox" id="toggle-gemini" aria-label="Gemini" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Claude</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-claude" checked>
+                <input type="checkbox" id="toggle-claude" aria-label="Claude" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Copilot</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-copilot" checked>
+                <input type="checkbox" id="toggle-copilot" aria-label="Copilot" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>DeepSeek</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-deepseek" checked>
+                <input type="checkbox" id="toggle-deepseek" aria-label="DeepSeek" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Grok</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-grok" checked>
+                <input type="checkbox" id="toggle-grok" aria-label="Grok" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Mistral</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-mistral" checked>
+                <input type="checkbox" id="toggle-mistral" aria-label="Mistral">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Perplexity</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-perplexity" checked>
+                <input type="checkbox" id="toggle-perplexity" aria-label="Perplexity" checked>
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Qwen</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-qwen">
+                <input type="checkbox" id="toggle-qwen" aria-label="Qwen">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Kimi</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-kimi">
+                <input type="checkbox" id="toggle-kimi" aria-label="Kimi">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>Z AI</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-zai">
+                <input type="checkbox" id="toggle-zai" aria-label="Z AI">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>NotebookLM</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-notebooklm">
+                <input type="checkbox" id="toggle-notebooklm" aria-label="NotebookLM">
                 <span class="slider"></span>
               </label>
             </div>
             <div class="toggle-item">
               <span>AI Studio</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-aistudio">
+                <input type="checkbox" id="toggle-aistudio" aria-label="AI Studio">
                 <span class="slider"></span>
               </label>
             </div>
@@ -328,7 +384,7 @@
                   Service → Action.</p>
               </div>
               <label class="switch">
-                <input type="checkbox" id="toggle-custom-service" checked>
+                <input type="checkbox" id="toggle-custom-service" aria-label="Custom Service" checked>
                 <span class="slider"></span>
               </label>
             </div>
@@ -357,7 +413,7 @@
               <span data-i18n="customServiceOpenModeLabel">Open in side panel
                 (instead of new tab)</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-custom-service-sidepanel"
+                <input type="checkbox" id="toggle-custom-service-sidepanel" aria-label="Open in side panel"
                   checked>
                 <span class="slider"></span>
               </label>
@@ -391,12 +447,10 @@
 
           <!-- Unified Keyboard Shortcuts Section -->
           <div class="shortcut-container" id="shortcut-section">
-            <div class="shortcut-header"
-              style="display:flex;align-items:center;justify-content:space-between">
-              <h3 data-i18n="shortcutLabel" style="margin:0"></h3>
+            <div class="shortcut-header">
+              <h3 data-i18n="shortcutLabel"></h3>
               <button id="manage-shortcuts-all" class="shortcut-button"
-                title="Manage shortcuts" aria-label="Manage shortcuts"
-                style="margin-left:12px">
+                title="Manage shortcuts" aria-label="Manage shortcuts">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                   viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -405,44 +459,41 @@
               </button>
             </div>
             <div class="shortcut-item">
-              <span data-i18n="toggleExtension"
-                style="margin-right: 10px"></span>
+              <span data-i18n="toggleExtension"></span>
               <div class="shortcut-input-wrapper">
                 <input type="text" id="shortcut-input" class="shortcut-input"
-                  value="Alt+Q" readonly>
+                  aria-label="Toggle extension shortcut" value="Alt+Q" readonly>
               </div>
             </div>
 
             <!-- Model switching shortcuts (read-only, managed in browser) -->
             <div class="shortcut-item">
-              <span data-i18n="switchNext" style="margin-right: 10px">Next
+              <span data-i18n="switchNext">Next
                 model</span>
               <div class="shortcut-input-wrapper">
                 <input type="text" id="shortcut-next-input"
-                  class="shortcut-input" value="Alt+Shift+N" readonly>
+                  class="shortcut-input" aria-label="Next model shortcut" value="Alt+Shift+N" readonly>
               </div>
             </div>
             <div class="shortcut-item">
-              <span data-i18n="switchPrev" style="margin-right: 10px">Previous
+              <span data-i18n="switchPrev">Previous
                 model</span>
               <div class="shortcut-input-wrapper">
                 <input type="text" id="shortcut-prev-input"
-                  class="shortcut-input" value="Alt+Shift+P" readonly>
+                  class="shortcut-input" aria-label="Previous model shortcut" value="Alt+Shift+P" readonly>
               </div>
             </div>
             <div class="shortcut-item">
-              <span data-i18n="toggleNeuralNav"
-                style="margin-right: 10px"></span>
+              <span data-i18n="toggleNeuralNav"></span>
               <div class="shortcut-input-wrapper">
                 <input type="text" id="shortcut-neural-nav-input"
-                  class="shortcut-input" value="Ctrl+." readonly>
+                  class="shortcut-input" aria-label="Toggle Neural Nav shortcut" value="Ctrl+." readonly>
               </div>
             </div>
 
             <!-- manage button moved to header -->
             <p class="shortcut-info" data-i18n="shortcutInfo"></p>
-            <p class="shortcut-info" data-i18n="shortcutsNote"
-              style="opacity:.8;font-size:.85rem">Shortcuts are managed by your
+            <p class="shortcut-info shortcut-info--subtle" data-i18n="shortcutsNote">Shortcuts are managed by your
               browser. If a combo conflicts with system or browser keys, pick
               another.</p>
           </div>
@@ -451,7 +502,7 @@
           <div class="toggle-container" id="language-section">
             <h3 data-i18n="language"></h3>
             <div class="select-wrapper">
-              <select id="language-select">
+              <select id="language-select" title="Select language">
                 <option value="en">English</option>
                 <option value="de">Deutsch</option>
                 <option value="es">Español</option>
@@ -471,7 +522,7 @@
           <div class="toggle-container" id="theme-settings-section">
             <h3 data-i18n="themeLabel">Theme</h3>
             <div class="select-wrapper">
-              <select id="theme-select">
+              <select id="theme-select" title="Select theme">
                 <option value="default"
                   data-i18n="themeDefault">Default</option>
                 <option value="synthwave"
@@ -490,26 +541,24 @@
                 <path d="M7 10l5 5 5-5z" fill="currentColor" />
               </svg>
             </div>
-            <p class="shortcut-info" data-i18n="themeSavedInfo"
-              style="opacity:.8;font-size:.85rem">Your choice is saved for next
+            <p class="shortcut-info shortcut-info--subtle" data-i18n="themeSavedInfo">Your choice is saved for next
               time.</p>
           </div>
 
-          <div class="toggle-container" id="synthwave-dim-container"
-            style="display:none;">
+          <div class="toggle-container" id="synthwave-dim-container">
             <h3 data-i18n="synthOptions">Synthwave Options</h3>
             <div class="toggle-item">
               <span data-i18n="synthDimGlowLabel">Dim neon glow (low
                 stimulus)</span>
               <label class="switch">
-                <input type="checkbox" id="toggle-synthwave-dim">
+                <input type="checkbox" id="toggle-synthwave-dim" aria-label="Dim neon glow">
                 <span class="slider"></span>
               </label>
             </div>
           </div>
 
           <div class="buttons-container">
-            <a class="social-button" data-social="github"
+            <a class="social-button" data-social="github" title="GitHub"
               href="https://github.com/creosb" target="_blank"
               rel="noopener noreferrer">
               <svg
@@ -527,7 +576,7 @@
               </svg>
             </a>
 
-            <a class="social-button" data-social="x" target="_blank"
+            <a class="social-button" data-social="x" title="X (Twitter)" target="_blank"
               rel="noopener noreferrer" href="https://x.com/creosb">
               <svg
                 viewBox="0 0 512 512"
@@ -539,7 +588,7 @@
                   d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
               </svg>
             </a>
-            <a class="social-button" data-social="youtube" target="_blank"
+            <a class="social-button" data-social="youtube" title="YouTube" target="_blank"
               rel="noopener noreferrer" href="https://www.youtube.com/@creosb">
               <svg
                 viewBox="0 0 24 24"
@@ -573,7 +622,7 @@
         </div>
         <div id="conversation-hub" class="conversation-hub" aria-hidden="true">
           <!-- Premium Teaser -->
-          <div id="conversation-hub-premium-teaser" class="conversation-hub-premium-teaser" style="display: none;">
+          <div id="conversation-hub-premium-teaser" class="conversation-hub-premium-teaser">
             <div class="support-message-card">
               <div class="support-heart-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -620,7 +669,7 @@
                     <div class="menu-item toggle-item">
                       <span data-i18n="conversationHubOpenMode">Open in new tab</span>
                       <label class="switch">
-                        <input type="checkbox" id="toggle-conversation-open-mode">
+                        <input type="checkbox" id="toggle-conversation-open-mode" aria-label="Open in new tab">
                         <span class="slider"></span>
                       </label>
                     </div>

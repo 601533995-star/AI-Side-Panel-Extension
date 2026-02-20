@@ -109,7 +109,72 @@ document.addEventListener('DOMContentLoaded', async () => {
       chrome.storage.local.remove('pendingCustomService');
     });
   } catch (_) {}
+
+  // ── Onboarding overlay ────────────────────────────────────────────
+  initOnboarding();
 });
+
+// ── Onboarding overlay management ────────────────────────────────────
+function showOnboardingOverlay() {
+  const overlay = document.getElementById('onboarding-overlay');
+  if (!overlay) return;
+  overlay.style.display = 'flex';
+  // Trigger CSS transition on next frame
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => overlay.classList.add('visible'));
+  });
+}
+
+function hideOnboardingOverlay() {
+  const overlay = document.getElementById('onboarding-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('visible');
+  setTimeout(() => { overlay.style.display = 'none'; }, 320);
+  try {
+    chrome.storage.local.set({ onboardingShown: true });
+  } catch (_) {}
+}
+
+function initOnboarding() {
+  const overlay = document.getElementById('onboarding-overlay');
+  if (!overlay) return;
+
+  // Check first-launch flag
+  try {
+    chrome.storage.local.get(['onboardingShown'], (result) => {
+      if (!result.onboardingShown) {
+        showOnboardingOverlay();
+      }
+    });
+  } catch (_) {
+    // Fallback: show it if storage is unavailable
+    showOnboardingOverlay();
+  }
+
+  // Listen for messages from the onboarding iframe
+  window.addEventListener('message', (e) => {
+    if (!e.data?.type) return;
+    switch (e.data.type) {
+      case 'ONBOARDING_COMPLETE':
+      case 'ONBOARDING_SKIP':
+        hideOnboardingOverlay();
+        break;
+      case 'OPEN_PREMIUM':
+        hideOnboardingOverlay();
+        // Small delay so the overlay fade finishes before modal opens
+        setTimeout(() => window.premiumManager?.open?.(), 350);
+        break;
+    }
+  });
+
+  // "Show feature tour" button in settings page
+  document.getElementById('show-onboarding-btn')?.addEventListener('click', () => {
+    showOnboardingOverlay();
+  });
+
+  // Expose globally so other modules can trigger it if needed
+  window.showOnboarding = showOnboardingOverlay;
+}
 
 // Legacy compatibility - expose functions that might be called externally
 window.toggleLoadingState = (show) => {
