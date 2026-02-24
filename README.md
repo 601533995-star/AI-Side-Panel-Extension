@@ -11,6 +11,8 @@ The **AI Side Panel Extension** for Chrome provides an easy and convenient way t
 [![Chrome](https://raw.githubusercontent.com/creosB/creosB/refs/heads/main/assets/Chrome%20Web%20Store.svg)](https://chromewebstore.google.com/detail/ai-side-panel/icapcpllhdnnpcmfdcgpnbgchfenmjmg)
 [![Edge](https://raw.githubusercontent.com/creosB/creosB/2ca982c79eff856e6bf5bf8f647e8e9eaaab7cb4/assets/Edge.svg)](https://microsoftedge.microsoft.com/addons/detail/ai-side-panel/okldldohcpoeldjackkdakhoflphiipn)
 [![google-play](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/google-play_vector.svg)](https://play.google.com/store/apps/details?id=com.artistscompany.ai_side_panel)
+[![app-store](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/app-store_vector.svg)](https://apps.apple.com/us/app/ai-side-panel-smart-workspace/id6758641857)
+
 [![sponsor](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/creos)
 
 ## Features
