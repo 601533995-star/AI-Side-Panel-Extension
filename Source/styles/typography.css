@@ -1,0 +1,127 @@
+/* Typography — Font Family, Font Size, Navbar Zoom
+ * -------------------------------------------------------
+ * CSS variables are set at runtime via TypographyManager
+ * using inline styles on :root. These rules pick them up
+ * and fall back to the original defaults when disabled.
+ * ------------------------------------------------------- */
+
+/* ── Hidden by default (JS toggles display) ─────────── */
+#typography-controls {
+  display: none;
+}
+
+/* ── Base overrides ──────────────────────────────────── */
+body {
+  /* Falls back to the existing Inter stack when not overridden */
+  font-family: var(--panel-font-family,
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+  font-size: var(--panel-font-size, 13px);
+}
+
+/* Browser UA stylesheets override font-family and font-size on form
+ * controls — force them to inherit the panel's typography variables. */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ── Navbar zoom ─────────────────────────────────────── */
+.toolbar {
+  /* zoom is a Chromium-native property — it resizes AND
+     re-flows the element, perfect for accessibility scaling */
+  zoom: var(--toolbar-zoom, 1);
+}
+
+/* ── Typography settings section layout ─────────────── */
+.typography-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  animation: typographyExpand 0.2s var(--ease-out-quart) both;
+}
+
+@keyframes typographyExpand {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Each row: label on left, select on right */
+.typography-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.typography-row-label {
+  flex: 1;
+  font-size: 0.82rem;
+  color: var(--text-color);
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Compact select wrapper for side-by-side layout */
+.select-wrapper--typography {
+  position: relative;
+  width: 148px;
+  flex-shrink: 0;
+}
+
+.select-wrapper--typography select {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-color);
+  padding: 6px 28px 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    border-color calc(var(--standard-duration) * var(--motion-duration-multiplier, 1)) var(--ease-out-quart),
+    background-color calc(var(--standard-duration) * var(--motion-duration-multiplier, 1)) var(--ease-out-quart);
+}
+
+.select-wrapper--typography select:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.select-wrapper--typography select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+.select-wrapper--typography .select-arrow {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Theme overrides — keep selects readable in all themes */
+[data-theme] .select-wrapper--typography select {
+  background: rgba(var(--bg-rgb, 15, 15, 15), 0.6);
+}

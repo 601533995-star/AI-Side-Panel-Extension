@@ -376,5 +376,68 @@
     },
     "clearConfirm": {
         "message": "Borrar todo"
+    },
+    "typographyLabel": {
+        "message": "Tipografía"
+    },
+    "typographyEnableLabel": {
+        "message": "Activar tipografía personalizada"
+    },
+    "typographySavedInfo": {
+        "message": "Sus preferencias se guardan para la próxima vez."
+    },
+    "fontSizeLabel": {
+        "message": "Tamaño de fuente"
+    },
+    "fontFamilyLabel": {
+        "message": "Fuente"
+    },
+    "navbarZoomLabel": {
+        "message": "Tamaño de barra"
+    },
+    "fontSizeTiny": {
+        "message": "Muy pequeño (11px)"
+    },
+    "fontSizeSmall": {
+        "message": "Pequeño (12px)"
+    },
+    "fontSizeDefault": {
+        "message": "Predeterminado (13px)"
+    },
+    "fontSizeMedium": {
+        "message": "Mediano (14px)"
+    },
+    "fontSizeLarge": {
+        "message": "Grande (16px)"
+    },
+    "fontSizeXLarge": {
+        "message": "Muy grande (18px)"
+    },
+    "fontFamilySystem": {
+        "message": "Predeterminado del sistema"
+    },
+    "fontFamilyGoogleSans": {
+        "message": "Google Sans"
+    },
+    "fontFamilyInter": {
+        "message": "Inter"
+    },
+    "fontFamilyNotoSans": {
+        "message": "Noto Sans"
+    },
+    "fontFamilyIBMPlexSans": {
+        "message": "IBM Plex Sans"
+    },
+    "navbarZoomSmall": {
+        "message": "Pequeño (85%)"
+    },
+    "navbarZoomDefault": {
+        "message": "Predeterminado (100%)"
+    },
+    "navbarZoomLarge": {
+        "message": "Grande (115%)"
+    },
+    "navbarZoomXLarge": {
+        "message": "Muy grande (130%)"
     }
 }

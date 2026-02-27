@@ -43,3 +43,6 @@
 @import './styles/themes/neo-brutalism.css';
 @import './styles/themes/neo-noir.css';
 @import './styles/themes/neo-anime.css';
+
+/* 14. Typography overrides (after all themes so it always wins) */
+@import './styles/typography.css';

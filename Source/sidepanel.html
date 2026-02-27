@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Side Panel</title>
+    <!-- Apply typography settings before first paint to avoid FOUC -->
+    <script src="fouc.js"></script>
     <link rel="stylesheet" href="sidepanel-modular.css" />
     <style>
       /* ── Onboarding overlay ──────────────────────────────── */
@@ -632,6 +634,87 @@
               </svg>
             </div>
           </div>
+
+          <!-- Typography Section -->
+          <div class="toggle-container" id="typography-settings-section">
+            <h3 data-i18n="typographyLabel">Typography</h3>
+            <div class="toggle-item">
+              <span data-i18n="typographyEnableLabel">Enable custom typography</span>
+              <label class="switch">
+                <input type="checkbox" id="toggle-typography-enabled"
+                  aria-label="Enable custom typography">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Sub-controls: shown only when master toggle is ON -->
+            <div class="typography-controls" id="typography-controls">
+
+              <!-- Font Size -->
+              <div class="typography-row">
+                <label class="typography-row-label" for="typography-font-size"
+                  data-i18n="fontSizeLabel">Font Size</label>
+                <div class="select-wrapper--typography">
+                  <select id="typography-font-size"
+                    data-i18n-title="fontSizeLabel" title="Font size">
+                    <option value="tiny"    data-i18n="fontSizeTiny">Tiny (11px)</option>
+                    <option value="small"   data-i18n="fontSizeSmall">Small (12px)</option>
+                    <option value="default" data-i18n="fontSizeDefault" selected>Default (13px)</option>
+                    <option value="medium"  data-i18n="fontSizeMedium">Medium (14px)</option>
+                    <option value="large"   data-i18n="fontSizeLarge">Large (16px)</option>
+                    <option value="xlarge"  data-i18n="fontSizeXLarge">X-Large (18px)</option>
+                  </select>
+                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Font Family -->
+              <div class="typography-row">
+                <label class="typography-row-label" for="typography-font-family"
+                  data-i18n="fontFamilyLabel">Font</label>
+                <div class="select-wrapper--typography">
+                  <select id="typography-font-family"
+                    data-i18n-title="fontFamilyLabel" title="Font family">
+                    <option value="system"        data-i18n="fontFamilySystem" selected>System Default</option>
+                    <option value="google-sans"   data-i18n="fontFamilyGoogleSans">Google Sans</option>
+                    <option value="inter"         data-i18n="fontFamilyInter">Inter</option>
+                    <option value="noto-sans"     data-i18n="fontFamilyNotoSans">Noto Sans</option>
+                    <option value="ibm-plex-sans" data-i18n="fontFamilyIBMPlexSans">IBM Plex Sans</option>
+                  </select>
+                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Navbar Zoom -->
+              <div class="typography-row">
+                <label class="typography-row-label" for="typography-navbar-zoom"
+                  data-i18n="navbarZoomLabel">Navbar Size</label>
+                <div class="select-wrapper--typography">
+                  <select id="typography-navbar-zoom"
+                    data-i18n-title="navbarZoomLabel" title="Navbar size">
+                    <option value="small"   data-i18n="navbarZoomSmall">Small (85%)</option>
+                    <option value="default" data-i18n="navbarZoomDefault" selected>Default (100%)</option>
+                    <option value="large"   data-i18n="navbarZoomLarge">Large (115%)</option>
+                    <option value="xlarge"  data-i18n="navbarZoomXLarge">X-Large (130%)</option>
+                  </select>
+                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+
+            </div><!-- /typography-controls -->
+
+            <p class="shortcut-info shortcut-info--subtle"
+              data-i18n="typographySavedInfo">Your preferences are saved for next time.</p>
+          </div><!-- /typography-settings-section -->
 
           <!-- Theme Section (Premium-gated) -->
           <div class="toggle-container" id="theme-settings-section">

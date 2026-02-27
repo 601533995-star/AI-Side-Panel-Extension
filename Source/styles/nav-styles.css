@@ -40,6 +40,7 @@
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform var(--nn-anim), border-color var(--nn-anim);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -326,6 +327,7 @@
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform var(--nn-anim), border-color var(--nn-anim);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -363,6 +365,7 @@
   transform-origin: top right;
   transition: all var(--nn-anim);
   visibility: hidden;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   overflow: hidden;
   z-index: 10000;

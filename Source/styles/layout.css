@@ -18,12 +18,18 @@
   overflow-y: hidden;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  scrollbar-width: thin; /* Firefox - show thin scrollbar */
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox scrollbar colors */
   transition: 
     background-color calc(var(--standard-duration) * var(--motion-duration-multiplier)) var(--ease-out-quart),
     box-shadow calc(var(--standard-duration) * var(--motion-duration-multiplier)) var(--ease-out-quart),
     transform calc(var(--quick-duration) * var(--motion-duration-multiplier)) var(--ease-out-expo);
+}
+
+/* Firefox scrollbar — progressive enhancement */
+@supports (scrollbar-width: thin) {
+  .toolbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
 }
 
 /* Main toolbar border */
@@ -123,6 +129,7 @@
 
 .toolbar .btn {
   cursor: grab;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -262,15 +269,17 @@ iframe.loading {
   transition-delay: 100ms;
 }
 
-/* Firefox hover-only mode */
-.toolbar.scrollbar-hover-only {
-  scrollbar-width: none;
-  transition: scrollbar-width calc(var(--standard-duration) * var(--motion-duration-multiplier)) var(--ease-out-quart);
-}
+/* Firefox hover-only mode — progressive enhancement */
+@supports (scrollbar-width: none) {
+  .toolbar.scrollbar-hover-only {
+    scrollbar-width: none;
+    transition: scrollbar-width calc(var(--standard-duration) * var(--motion-duration-multiplier)) var(--ease-out-quart);
+  }
 
-.toolbar.scrollbar-hover-only:hover,
-.toolbar.scrollbar-hover-only:focus-within {
-  scrollbar-width: thin;
+  .toolbar.scrollbar-hover-only:hover,
+  .toolbar.scrollbar-hover-only:focus-within {
+    scrollbar-width: thin;
+  }
 }
 
 

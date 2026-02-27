@@ -376,5 +376,68 @@
     },
     "clearConfirm": {
         "message": "全部清除"
+    },
+    "typographyLabel": {
+        "message": "排版"
+    },
+    "typographyEnableLabel": {
+        "message": "启用自定义排版"
+    },
+    "typographySavedInfo": {
+        "message": "您的偏好已保存。"
+    },
+    "fontSizeLabel": {
+        "message": "字体大小"
+    },
+    "fontFamilyLabel": {
+        "message": "字体"
+    },
+    "navbarZoomLabel": {
+        "message": "导航栏大小"
+    },
+    "fontSizeTiny": {
+        "message": "极小 (11px)"
+    },
+    "fontSizeSmall": {
+        "message": "小 (12px)"
+    },
+    "fontSizeDefault": {
+        "message": "默认 (13px)"
+    },
+    "fontSizeMedium": {
+        "message": "中 (14px)"
+    },
+    "fontSizeLarge": {
+        "message": "大 (16px)"
+    },
+    "fontSizeXLarge": {
+        "message": "超大 (18px)"
+    },
+    "fontFamilySystem": {
+        "message": "系统默认"
+    },
+    "fontFamilyGoogleSans": {
+        "message": "Google Sans"
+    },
+    "fontFamilyInter": {
+        "message": "Inter"
+    },
+    "fontFamilyNotoSans": {
+        "message": "Noto Sans"
+    },
+    "fontFamilyIBMPlexSans": {
+        "message": "IBM Plex Sans"
+    },
+    "navbarZoomSmall": {
+        "message": "小 (85%)"
+    },
+    "navbarZoomDefault": {
+        "message": "默认 (100%)"
+    },
+    "navbarZoomLarge": {
+        "message": "大 (115%)"
+    },
+    "navbarZoomXLarge": {
+        "message": "超大 (130%)"
     }
 }

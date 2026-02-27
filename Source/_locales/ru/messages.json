@@ -376,5 +376,68 @@
     },
     "clearConfirm": {
         "message": "Очистить всё"
+    },
+    "typographyLabel": {
+        "message": "Типографика"
+    },
+    "typographyEnableLabel": {
+        "message": "Включить настройки шрифта"
+    },
+    "typographySavedInfo": {
+        "message": "Ваши настройки сохранены."
+    },
+    "fontSizeLabel": {
+        "message": "Размер шрифта"
+    },
+    "fontFamilyLabel": {
+        "message": "Шрифт"
+    },
+    "navbarZoomLabel": {
+        "message": "Размер панели"
+    },
+    "fontSizeTiny": {
+        "message": "Крошечный (11px)"
+    },
+    "fontSizeSmall": {
+        "message": "Маленький (12px)"
+    },
+    "fontSizeDefault": {
+        "message": "По умолчанию (13px)"
+    },
+    "fontSizeMedium": {
+        "message": "Средний (14px)"
+    },
+    "fontSizeLarge": {
+        "message": "Большой (16px)"
+    },
+    "fontSizeXLarge": {
+        "message": "Очень большой (18px)"
+    },
+    "fontFamilySystem": {
+        "message": "Системный"
+    },
+    "fontFamilyGoogleSans": {
+        "message": "Google Sans"
+    },
+    "fontFamilyInter": {
+        "message": "Inter"
+    },
+    "fontFamilyNotoSans": {
+        "message": "Noto Sans"
+    },
+    "fontFamilyIBMPlexSans": {
+        "message": "IBM Plex Sans"
+    },
+    "navbarZoomSmall": {
+        "message": "Маленькая (85%)"
+    },
+    "navbarZoomDefault": {
+        "message": "По умолчанию (100%)"
+    },
+    "navbarZoomLarge": {
+        "message": "Большая (115%)"
+    },
+    "navbarZoomXLarge": {
+        "message": "Очень большая (130%)"
     }
 }

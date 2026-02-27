@@ -376,5 +376,68 @@
     },
     "clearConfirm": {
         "message": "Tümünü Temizle"
+    },
+    "typographyLabel": {
+        "message": "Tipografi"
+    },
+    "typographyEnableLabel": {
+        "message": "Özel tipografiyi etkinleştir"
+    },
+    "typographySavedInfo": {
+        "message": "Tercihleriniz bir sonraki sefere kaydedildi."
+    },
+    "fontSizeLabel": {
+        "message": "Yazı Boyutu"
+    },
+    "fontFamilyLabel": {
+        "message": "Yazı Tipi"
+    },
+    "navbarZoomLabel": {
+        "message": "Gezinti Çubuğu"
+    },
+    "fontSizeTiny": {
+        "message": "Çok Küçük (11px)"
+    },
+    "fontSizeSmall": {
+        "message": "Küçük (12px)"
+    },
+    "fontSizeDefault": {
+        "message": "Varsayılan (13px)"
+    },
+    "fontSizeMedium": {
+        "message": "Orta (14px)"
+    },
+    "fontSizeLarge": {
+        "message": "Büyük (16px)"
+    },
+    "fontSizeXLarge": {
+        "message": "Çok Büyük (18px)"
+    },
+    "fontFamilySystem": {
+        "message": "Sistem Varsayılanı"
+    },
+    "fontFamilyGoogleSans": {
+        "message": "Google Sans"
+    },
+    "fontFamilyInter": {
+        "message": "Inter"
+    },
+    "fontFamilyNotoSans": {
+        "message": "Noto Sans"
+    },
+    "fontFamilyIBMPlexSans": {
+        "message": "IBM Plex Sans"
+    },
+    "navbarZoomSmall": {
+        "message": "Küçük (85%)"
+    },
+    "navbarZoomDefault": {
+        "message": "Varsayılan (100%)"
+    },
+    "navbarZoomLarge": {
+        "message": "Büyük (115%)"
+    },
+    "navbarZoomXLarge": {
+        "message": "Çok Büyük (130%)"
     }
 }

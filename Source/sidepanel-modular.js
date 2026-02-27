@@ -1,6 +1,7 @@
 // Main Application Entry Point
 import { SplitViewManager } from './modules/splitView.js';
 import { SettingsManager } from './modules/settings.js';
+import { TypographyManager } from './modules/typography.js';
 import { NavBarManager } from './modules/navBar.js';
 import { SaveManager } from './modules/saveManager.js';
 import { CustomLinkManager } from './modules/customLink.js';
@@ -15,6 +16,7 @@ class SidePanelApp {
     this.saveManager = new SaveManager();
     this.customLinkManager = new CustomLinkManager();
     this.settingsManager = new SettingsManager();
+    this.typographyManager = new TypographyManager();
     this.navBarManager = new NavBarManager();
     this.splitViewManager = new SplitViewManager();
     this.contentExtractorManager = new ContentExtractorManager();
@@ -26,6 +28,7 @@ class SidePanelApp {
     window.saveManager = this.saveManager;
     window.customLinkManager = this.customLinkManager;
     window.settingsManager = this.settingsManager;
+    window.typographyManager = this.typographyManager;
     window.navBarManager = this.navBarManager;
     window.splitViewManager = this.splitViewManager;
     window.contentExtractorManager = this.contentExtractorManager;

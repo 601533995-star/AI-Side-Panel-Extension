@@ -376,5 +376,68 @@
   },
   "clearConfirm": {
     "message": "Clear All"
+  },
+  "typographyLabel": {
+    "message": "Typography"
+  },
+  "typographyEnableLabel": {
+    "message": "Enable custom typography"
+  },
+  "typographySavedInfo": {
+    "message": "Your preferences are saved for next time."
+  },
+  "fontSizeLabel": {
+    "message": "Font Size"
+  },
+  "fontFamilyLabel": {
+    "message": "Font"
+  },
+  "navbarZoomLabel": {
+    "message": "Navbar Size"
+  },
+  "fontSizeTiny": {
+    "message": "Tiny (11px)"
+  },
+  "fontSizeSmall": {
+    "message": "Small (12px)"
+  },
+  "fontSizeDefault": {
+    "message": "Default (13px)"
+  },
+  "fontSizeMedium": {
+    "message": "Medium (14px)"
+  },
+  "fontSizeLarge": {
+    "message": "Large (16px)"
+  },
+  "fontSizeXLarge": {
+    "message": "X&#8209;Large (18px)"
+  },
+  "fontFamilySystem": {
+    "message": "System Default"
+  },
+  "fontFamilyGoogleSans": {
+    "message": "Google Sans"
+  },
+  "fontFamilyInter": {
+    "message": "Inter"
+  },
+  "fontFamilyNotoSans": {
+    "message": "Noto Sans"
+  },
+  "fontFamilyIBMPlexSans": {
+    "message": "IBM Plex Sans"
+  },
+  "navbarZoomSmall": {
+    "message": "Small (85%)"
+  },
+  "navbarZoomDefault": {
+    "message": "Default (100%)"
+  },
+  "navbarZoomLarge": {
+    "message": "Large (115%)"
+  },
+  "navbarZoomXLarge": {
+    "message": "X&#8209;Large (130%)"
   }
 }

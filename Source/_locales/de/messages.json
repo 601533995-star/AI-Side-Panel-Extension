@@ -376,5 +376,68 @@
     },
     "clearConfirm": {
         "message": "Alles löschen"
+    },
+    "typographyLabel": {
+        "message": "Typografie"
+    },
+    "typographyEnableLabel": {
+        "message": "Benutzerdefinierte Typografie aktivieren"
+    },
+    "typographySavedInfo": {
+        "message": "Ihre Einstellungen werden für das nächste Mal gespeichert."
+    },
+    "fontSizeLabel": {
+        "message": "Schriftgröße"
+    },
+    "fontFamilyLabel": {
+        "message": "Schriftart"
+    },
+    "navbarZoomLabel": {
+        "message": "Navigationsleiste"
+    },
+    "fontSizeTiny": {
+        "message": "Winzig (11px)"
+    },
+    "fontSizeSmall": {
+        "message": "Klein (12px)"
+    },
+    "fontSizeDefault": {
+        "message": "Standard (13px)"
+    },
+    "fontSizeMedium": {
+        "message": "Mittel (14px)"
+    },
+    "fontSizeLarge": {
+        "message": "Groß (16px)"
+    },
+    "fontSizeXLarge": {
+        "message": "Sehr groß (18px)"
+    },
+    "fontFamilySystem": {
+        "message": "Systemstandard"
+    },
+    "fontFamilyGoogleSans": {
+        "message": "Google Sans"
+    },
+    "fontFamilyInter": {
+        "message": "Inter"
+    },
+    "fontFamilyNotoSans": {
+        "message": "Noto Sans"
+    },
+    "fontFamilyIBMPlexSans": {
+        "message": "IBM Plex Sans"
+    },
+    "navbarZoomSmall": {
+        "message": "Klein (85%)"
+    },
+    "navbarZoomDefault": {
+        "message": "Standard (100%)"
+    },
+    "navbarZoomLarge": {
+        "message": "Groß (115%)"
+    },
+    "navbarZoomXLarge": {
+        "message": "Sehr groß (130%)"
     }
 }
