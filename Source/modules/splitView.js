@@ -55,6 +55,7 @@ export class SplitViewManager {
     // Create second iframe with proper attributes and more secure sandbox
     const secondIframe = document.createElement('iframe');
     secondIframe.id = 'second-iframe';
+    secondIframe.name = 'ai-sp-embed';
     secondIframe.frameBorder = '0';
     secondIframe.setAttribute('allow', 'clipboard-read; clipboard-write');
     secondIframe.setAttribute('sandbox', 'allow-scripts allow-forms allow-same-origin allow-downloads allow-popups');

@@ -104,6 +104,7 @@ export class NavBarManager {
     iframe.addEventListener('load', handleLoad);
 
     // Set new URL
+    iframe.name = 'ai-sp-embed';
     iframe.src = url;
     iframe.style.display = 'block';
 
@@ -157,6 +158,7 @@ export class NavBarManager {
     };
     iframe.addEventListener('load', handleLoad);
 
+    iframe.name = 'ai-sp-embed';
     iframe.src = url;
     iframe.dataset.customServiceId = serviceId || '';
     iframe.dataset.customActionId = actionId || '';
@@ -201,6 +203,7 @@ export class NavBarManager {
     };
     iframe.addEventListener('load', handleLoad);
 
+    iframe.name = 'ai-sp-embed';
     iframe.src = url;
     iframe.style.display = 'block';
 
@@ -331,7 +334,9 @@ export class NavBarManager {
     } catch {
       url = firstVisibleButton ? firstVisibleButton.getAttribute('data-url') : defaultUrl;
     }
+    iframe.name = 'ai-sp-embed';
     iframe.src = url;
+    this.focusSearchInIframe(iframe, url);
 
     // Add active class to the first visible button if it exists
     // Set active class to the button matching the chosen URL
