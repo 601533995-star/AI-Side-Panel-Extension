@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // ── Onboarding overlay ────────────────────────────────────────────
   initOnboarding();
+  initKnownIssuesModal();
 });
 
 // ── Onboarding overlay management ────────────────────────────────────
@@ -177,6 +178,40 @@ function initOnboarding() {
 
   // Expose globally so other modules can trigger it if needed
   window.showOnboarding = showOnboardingOverlay;
+}
+
+function showKnownIssuesModal() {
+  const modal = document.getElementById('known-issues-modal');
+  if (!modal) return;
+  modal.classList.add('visible');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function hideKnownIssuesModal() {
+  const modal = document.getElementById('known-issues-modal');
+  if (!modal) return;
+  modal.classList.remove('visible');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+function initKnownIssuesModal() {
+  const modal = document.getElementById('known-issues-modal');
+  const openBtn = document.getElementById('known-issues-btn');
+  const closeBtn = document.getElementById('known-issues-close-btn');
+  if (!modal || !openBtn) return;
+
+  openBtn.addEventListener('click', showKnownIssuesModal);
+  closeBtn?.addEventListener('click', hideKnownIssuesModal);
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) hideKnownIssuesModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('visible')) {
+      hideKnownIssuesModal();
+    }
+  });
 }
 
 // Legacy compatibility - expose functions that might be called externally

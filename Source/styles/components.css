@@ -54,6 +54,28 @@
   transition: transform calc(var(--spring-duration) * var(--motion-duration-multiplier)) var(--ease-spring);
 }
 
+.support-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0.2rem 0 0.7rem;
+}
+
+.support-brand-title {
+  margin: 0;
+  line-height: 1.05;
+  font-size: clamp(1.35rem, 3.6vw, 1.65rem);
+  white-space: nowrap;
+}
+
+.support-brand-logo {
+  width: 42px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
 .logo:hover {
   transform: scale(calc(1 + 0.05 * var(--motion-scale))) rotate(calc(1deg * var(--motion-scale)));
 }
