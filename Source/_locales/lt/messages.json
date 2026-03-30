@@ -53,6 +53,51 @@
   "supportButton": {
     "message": "Pirkti man kavą"
   },
+  "premiumModalSubtitle": {
+    "message": "Atrakinkite papildomas funkcijas ir paremkite kūrimą."
+  },
+  "premiumModalFeature3": {
+    "message": "Pirmenybinė pagalba"
+  },
+  "premiumModalEmailPlaceholder": {
+    "message": "El. paštas, naudotas atsiskaitant"
+  },
+  "premiumModalLicensePlaceholder": {
+    "message": "Licencijos raktas"
+  },
+  "premiumModalVerifyButton": {
+    "message": "Tikrinti"
+  },
+  "premiumModalStatusPrompt": {
+    "message": "Įveskite el. paštą ir licenciją, kad patvirtintumėte."
+  },
+  "premiumModalStatusActive": {
+    "message": "Premium aktyvus. Ačiū!"
+  },
+  "premiumModalStatusPending": {
+    "message": "Licencija dar nepatvirtinta."
+  },
+  "premiumModalStatusMissingFields": {
+    "message": "Reikalingas el. paštas ir licencija."
+  },
+  "premiumModalStatusInvalidEmail": {
+    "message": "Neteisingas el. paštas."
+  },
+  "premiumModalStatusInvalidLicense": {
+    "message": "Neteisingas licencijos formatas."
+  },
+  "premiumModalStatusRateLimit": {
+    "message": "Per daug bandymų. Bandykite vėliau."
+  },
+  "premiumModalStatusSuccess": {
+    "message": "Prieiga suteikta. Sveiki atvykę į Premium!"
+  },
+  "premiumModalStatusFailed": {
+    "message": "Patikra nepavyko."
+  },
+  "premiumModalStatusUnexpected": {
+    "message": "Netikėta klaida."
+  },
   "extractButton": {
     "message": "Išgauti"
   },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "Šis plėtinys yra visiškai atviro kodo."
+  },
+  "showFeatureTour": {
+    "message": "Rodyti funkcijų gidą"
   }
 }

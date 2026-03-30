@@ -53,6 +53,51 @@
     "supportButton": {
         "message": "Bana Kahve Ismarla"
     },
+        "premiumModalSubtitle": {
+            "message": "Ek özelliklerin kilidini açın ve geliştirmeyi destekleyin."
+        },
+        "premiumModalFeature3": {
+            "message": "Öncelikli destek"
+        },
+        "premiumModalEmailPlaceholder": {
+            "message": "Ödeme sırasında kullanılan e-posta"
+        },
+        "premiumModalLicensePlaceholder": {
+            "message": "Lisans anahtarı"
+        },
+        "premiumModalVerifyButton": {
+            "message": "Doğrula"
+        },
+        "premiumModalStatusPrompt": {
+            "message": "Doğrulamak için e-postanızı ve lisansınızı girin."
+        },
+        "premiumModalStatusActive": {
+            "message": "Premium etkin. Teşekkürler!"
+        },
+        "premiumModalStatusPending": {
+            "message": "Lisans henüz doğrulanmadı."
+        },
+        "premiumModalStatusMissingFields": {
+            "message": "E-posta ve lisans gerekli."
+        },
+        "premiumModalStatusInvalidEmail": {
+            "message": "Geçersiz e-posta."
+        },
+        "premiumModalStatusInvalidLicense": {
+            "message": "Geçersiz lisans biçimi."
+        },
+        "premiumModalStatusRateLimit": {
+            "message": "Çok fazla deneme. Daha sonra tekrar deneyin."
+        },
+        "premiumModalStatusSuccess": {
+            "message": "Erişim verildi. Premium'a hoş geldiniz!"
+        },
+        "premiumModalStatusFailed": {
+            "message": "Doğrulama başarısız."
+        },
+        "premiumModalStatusUnexpected": {
+            "message": "Beklenmeyen hata."
+        },
     "extractButton": {
         "message": "Çıkart"
     },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "Bu eklenti tamamen açık kaynaklıdır."
+    },
+    "showFeatureTour": {
+        "message": "Özellik turunu göster"
   }
 }

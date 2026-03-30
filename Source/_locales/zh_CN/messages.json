@@ -53,6 +53,51 @@
     "supportButton": {
         "message": "请我喝咖啡"
     },
+    "premiumModalSubtitle": {
+        "message": "解锁更多功能并支持开发。"
+    },
+    "premiumModalFeature3": {
+        "message": "优先支持"
+    },
+    "premiumModalEmailPlaceholder": {
+        "message": "结账时使用的电子邮件"
+    },
+    "premiumModalLicensePlaceholder": {
+        "message": "许可证密钥"
+    },
+    "premiumModalVerifyButton": {
+        "message": "验证"
+    },
+    "premiumModalStatusPrompt": {
+        "message": "请输入您的电子邮件和许可证进行验证。"
+    },
+    "premiumModalStatusActive": {
+        "message": "Premium 已激活。谢谢！"
+    },
+    "premiumModalStatusPending": {
+        "message": "许可证尚未验证。"
+    },
+    "premiumModalStatusMissingFields": {
+        "message": "需要电子邮件和许可证。"
+    },
+    "premiumModalStatusInvalidEmail": {
+        "message": "电子邮件无效。"
+    },
+    "premiumModalStatusInvalidLicense": {
+        "message": "许可证格式无效。"
+    },
+    "premiumModalStatusRateLimit": {
+        "message": "尝试次数过多。请稍后再试。"
+    },
+    "premiumModalStatusSuccess": {
+        "message": "已授予访问权限。欢迎使用 Premium！"
+    },
+    "premiumModalStatusFailed": {
+        "message": "验证失败。"
+    },
+    "premiumModalStatusUnexpected": {
+        "message": "发生意外错误。"
+    },
     "extractButton": {
         "message": "提取"
     },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "此扩展程序完全开源。"
+    },
+    "showFeatureTour": {
+        "message": "显示功能导览"
   }
 }

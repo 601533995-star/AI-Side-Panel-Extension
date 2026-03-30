@@ -53,6 +53,51 @@
     "supportButton": {
         "message": "Купить Мне Кофе"
     },
+    "premiumModalSubtitle": {
+        "message": "Откройте дополнительные возможности и поддержите разработку."
+    },
+    "premiumModalFeature3": {
+        "message": "Приоритетная поддержка"
+    },
+    "premiumModalEmailPlaceholder": {
+        "message": "Эл. почта, использованная при покупке"
+    },
+    "premiumModalLicensePlaceholder": {
+        "message": "Лицензионный ключ"
+    },
+    "premiumModalVerifyButton": {
+        "message": "Проверить"
+    },
+    "premiumModalStatusPrompt": {
+        "message": "Введите e-mail и лицензию, чтобы подтвердить."
+    },
+    "premiumModalStatusActive": {
+        "message": "Premium активирован. Спасибо!"
+    },
+    "premiumModalStatusPending": {
+        "message": "Лицензия еще не подтверждена."
+    },
+    "premiumModalStatusMissingFields": {
+        "message": "Требуются e-mail и лицензия."
+    },
+    "premiumModalStatusInvalidEmail": {
+        "message": "Неверный e-mail."
+    },
+    "premiumModalStatusInvalidLicense": {
+        "message": "Неверный формат лицензии."
+    },
+    "premiumModalStatusRateLimit": {
+        "message": "Слишком много попыток. Попробуйте позже."
+    },
+    "premiumModalStatusSuccess": {
+        "message": "Доступ разрешен. Добро пожаловать в Premium!"
+    },
+    "premiumModalStatusFailed": {
+        "message": "Проверка не удалась."
+    },
+    "premiumModalStatusUnexpected": {
+        "message": "Непредвиденная ошибка."
+    },
     "extractButton": {
         "message": "Извлечь"
     },
@@ -541,5 +586,8 @@
     },
     "onboardingSupportNote": {
         "message": "Это расширение полностью с открытым исходным кодом."
+    },
+    "showFeatureTour": {
+        "message": "Показать тур по возможностям"
     }
 }

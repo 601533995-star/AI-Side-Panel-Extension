@@ -16,6 +16,41 @@ export default class PremiumManager {
 		this.port = null;
 	}
 
+	t(key, fallback, substitutions = []) {
+		const localized = window._i18nMessages?.[key]?.message
+			|| chrome?.i18n?.getMessage?.(key, substitutions)
+			|| '';
+		return localized || fallback;
+	}
+
+	localizeModal() {
+		if (!this.overlay) return;
+
+		const titleEl = this.overlay.querySelector('[data-premium-title]');
+		const subtitleEl = this.overlay.querySelector('[data-premium-subtitle]');
+		const featureOneEl = this.overlay.querySelector('[data-premium-feature-1]');
+		const featureTwoEl = this.overlay.querySelector('[data-premium-feature-2]');
+		const featureThreeEl = this.overlay.querySelector('[data-premium-feature-3]');
+		const featureFourEl = this.overlay.querySelector('[data-premium-feature-4]');
+
+		if (titleEl) titleEl.textContent = this.t('premiumModalTitle', 'Premium');
+		if (subtitleEl) subtitleEl.textContent = this.t('premiumModalSubtitle', 'Unlock extra features and support development.');
+		if (featureOneEl) featureOneEl.textContent = this.t('onboardingFeature3', 'Support education & future development');
+		if (featureTwoEl) featureTwoEl.textContent = this.t('onboardingFeature2', 'Exclusive Theme Selector & custom styles');
+		if (featureThreeEl) featureThreeEl.textContent = this.t('premiumModalFeature3', 'Priority support');
+		if (featureFourEl) featureFourEl.textContent = this.t('conversationHubPremiumDescription', 'The Conversation Hub allows you to see and search all your AI conversations in one place. This is a premium feature to support the development.');
+
+		if (this.emailInput) this.emailInput.placeholder = this.t('premiumModalEmailPlaceholder', 'Email used at checkout');
+		if (this.codeInput) this.codeInput.placeholder = this.t('premiumModalLicensePlaceholder', 'License key');
+		if (this.buyBtn) this.buyBtn.textContent = this.t('onboardingGoPremiumBtn', 'Go Premium');
+		if (this.verifyBtn) this.verifyBtn.textContent = this.t('premiumModalVerifyButton', 'Verify');
+		if (this.closeBtn) this.closeBtn.setAttribute('aria-label', this.t('extractionModalClose', 'Close'));
+
+		if (this.statusBox && !this.statusBox.textContent) {
+			this.statusBox.textContent = this.t('premiumModalStatusPrompt', 'Enter your email and license to verify.');
+		}
+	}
+
 	init() {
 		this.replaceSupportButton();
 		// Listen for global requests to open the premium modal (e.g. from supportMessage)
@@ -52,14 +87,15 @@ export default class PremiumManager {
 					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.9 4.89a1 1 0 1 0 1.41 1.42L12 13.41l4.89 4.9a1 1 0 0 0 1.42-1.42L13.41 12l4.9-4.89a1 1 0 0 0-.01-1.4Z"/></svg>
 				</button>
 				<div class="premium-modal-header">
-					<h2 id="premium-title" class="premium-modal-title">Premium</h2>
-					<div class="premium-modal-subtitle">Unlock extra features and support development.</div>
+					<h2 id="premium-title" class="premium-modal-title" data-premium-title>Premium</h2>
+					<div class="premium-modal-subtitle" data-premium-subtitle>Unlock extra features and support development.</div>
 				</div>
 				<div class="premium-modal-body">
 					<div class="premium-features">
-						<div class="premium-feature"><span>✔</span><span>Your support helps fund ongoing development and my education.</span></div>
-						<div class="premium-feature"><span>✔</span><span>Enhance your browsing with beautiful, custom themes.</span></div>
-						<div class="premium-feature"><span>✔</span><span>Priority support</span></div>
+						<div class="premium-feature"><span>✔</span><span data-premium-feature-1>Your support helps fund ongoing development and my education.</span></div>
+						<div class="premium-feature"><span>✔</span><span data-premium-feature-2>Enhance your browsing with beautiful, custom themes.</span></div>
+						<div class="premium-feature"><span>✔</span><span data-premium-feature-3>Priority support</span></div>
+						<div class="premium-feature"><span>✔</span><span data-premium-feature-4>The Conversation Hub allows you to see and search all your AI conversations in one place. This is a premium feature to support the development.</span></div>
 					</div>
 					<div class="premium-form" data-premium-form>
 						<input type="email" class="premium-input" placeholder="Email used at checkout" data-premium-email />
@@ -67,7 +103,7 @@ export default class PremiumManager {
 					</div>
 					<div class="premium-status" data-premium-status></div>
 					<div class="premium-actions" data-premium-actions>
-						<button class="premium-btn primary" data-premium-buy>Upgrade</button>
+						<button class="premium-btn primary" data-premium-buy>Go Premium</button>
 						<button class="premium-btn secondary" data-premium-verify>Verify</button>
 					</div>
 				</div>
@@ -91,6 +127,7 @@ export default class PremiumManager {
 			window.open('https://artistscompany.lemonsqueezy.com/buy/07ad19ea-1d92-4855-a68e-56d9c77a0b6a', '_blank');
 		});
 		this.verifyBtn?.addEventListener('click', () => this.handleVerify());
+		this.localizeModal();
 
 		// pre-fill status if already premium
 		this.updateStatusFromStorage();
@@ -138,13 +175,13 @@ export default class PremiumManager {
 			if (!statusEl) return;
 			if (!bg || bg.isPremium === undefined) {
 				statusEl.className = 'premium-status info show';
-				statusEl.textContent = 'Enter your email and license to verify.';
+				statusEl.textContent = this.t('premiumModalStatusPrompt', 'Enter your email and license to verify.');
 				this.showVerifyForm(true);
 				return;
 			}
 			if (bg.isPremium) {
 				statusEl.className = 'premium-status success show';
-				statusEl.textContent = 'Premium active. Thank you!';
+				statusEl.textContent = this.t('premiumModalStatusActive', 'Premium active. Thank you!');
 				this.showVerifyForm(false);
 				// Hide or disable Upgrade button when already premium
 				if (this.buyBtn) {
@@ -154,7 +191,7 @@ export default class PremiumManager {
 				this.setPremiumBadge(true);
 			} else {
 				statusEl.className = 'premium-status info show';
-				statusEl.textContent = 'License not verified yet.';
+				statusEl.textContent = this.t('premiumModalStatusPending', 'License not verified yet.');
 				this.showVerifyForm(true);
 				if (this.buyBtn) {
 					this.buyBtn.style.display = '';
@@ -212,25 +249,26 @@ export default class PremiumManager {
 			this.statusBox.textContent = msg;
 		};
 
-		if (!email || !code) return show('error', 'Email and license are required.');
-		if (!this.isValidEmail(email)) return show('error', 'Invalid email.');
-		if (!this.isValidCode(code)) return show('error', 'Invalid license format.');
+			if (!email || !code) return show('error', this.t('premiumModalStatusMissingFields', 'Email and license are required.'));
+			if (!this.isValidEmail(email)) return show('error', this.t('premiumModalStatusInvalidEmail', 'Invalid email.'));
+			if (!this.isValidCode(code)) return show('error', this.t('premiumModalStatusInvalidLicense', 'Invalid license format.'));
 
-		if (!this.checkRateLimit(email)) return show('error', 'Too many attempts. Try later.');
+			if (!this.checkRateLimit(email)) return show('error', this.t('premiumModalStatusRateLimit', 'Too many attempts. Try later.'));
 		this.incrementAttempts(email);
 
 			try {
 				const result = await checkPremiumStatus(email, code);
 				if (result.isPremium) {
-					show('success', 'Access granted. Welcome to Premium!');
+						show('success', this.t(result.messageKey || 'premiumModalStatusSuccess', 'Access granted. Welcome to Premium!'));
 					setTimeout(() => this.close(), 1500);
 				} else {
-					// Show the message from auth
-					show('info', result.message || 'Verification failed.');
+						const messageKey = result.messageKey || 'premiumModalStatusFailed';
+						const message = this.t(messageKey, result.message || 'Verification failed.');
+						show(messageKey === 'premiumModalStatusRateLimit' ? 'error' : 'info', message);
 				}
 			} catch (e) {
 				console.error('verify error', e);
-				show('error', 'Unexpected error.');
+					show('error', this.t('premiumModalStatusUnexpected', 'Unexpected error.'));
 			}
 	}
 }

@@ -56,6 +56,51 @@
     "supportButton": {
         "message": "Offrez-moi un Café"
     },
+    "premiumModalSubtitle": {
+        "message": "Débloquez des fonctionnalités supplémentaires et soutenez le développement."
+    },
+    "premiumModalFeature3": {
+        "message": "Assistance prioritaire"
+    },
+    "premiumModalEmailPlaceholder": {
+        "message": "E-mail utilisé lors du paiement"
+    },
+    "premiumModalLicensePlaceholder": {
+        "message": "Clé de licence"
+    },
+    "premiumModalVerifyButton": {
+        "message": "Vérifier"
+    },
+    "premiumModalStatusPrompt": {
+        "message": "Saisissez votre e-mail et votre licence pour vérifier."
+    },
+    "premiumModalStatusActive": {
+        "message": "Premium actif. Merci !"
+    },
+    "premiumModalStatusPending": {
+        "message": "La licence n'est pas encore vérifiée."
+    },
+    "premiumModalStatusMissingFields": {
+        "message": "L'e-mail et la licence sont requis."
+    },
+    "premiumModalStatusInvalidEmail": {
+        "message": "E-mail invalide."
+    },
+    "premiumModalStatusInvalidLicense": {
+        "message": "Format de licence invalide."
+    },
+    "premiumModalStatusRateLimit": {
+        "message": "Trop de tentatives. Réessayez plus tard."
+    },
+    "premiumModalStatusSuccess": {
+        "message": "Accès accordé. Bienvenue dans Premium !"
+    },
+    "premiumModalStatusFailed": {
+        "message": "Échec de la vérification."
+    },
+    "premiumModalStatusUnexpected": {
+        "message": "Erreur inattendue."
+    },
     "extractButton": {
         "message": "Extraire"
     },
@@ -544,5 +589,8 @@
     },
     "onboardingSupportNote": {
         "message": "Cette extension est entièrement open source."
+    },
+    "showFeatureTour": {
+        "message": "Afficher la visite guidée"
     }
 }

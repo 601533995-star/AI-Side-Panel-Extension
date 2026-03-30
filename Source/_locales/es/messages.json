@@ -53,6 +53,51 @@
     "supportButton": {
         "message": "Cómprame un Café"
     },
+    "premiumModalSubtitle": {
+        "message": "Desbloquea funciones adicionales y apoya el desarrollo."
+    },
+    "premiumModalFeature3": {
+        "message": "Soporte prioritario"
+    },
+    "premiumModalEmailPlaceholder": {
+        "message": "Correo usado al finalizar la compra"
+    },
+    "premiumModalLicensePlaceholder": {
+        "message": "Clave de licencia"
+    },
+    "premiumModalVerifyButton": {
+        "message": "Verificar"
+    },
+    "premiumModalStatusPrompt": {
+        "message": "Introduce tu correo y tu licencia para verificar."
+    },
+    "premiumModalStatusActive": {
+        "message": "Premium activo. ¡Gracias!"
+    },
+    "premiumModalStatusPending": {
+        "message": "La licencia aún no está verificada."
+    },
+    "premiumModalStatusMissingFields": {
+        "message": "Se requieren el correo y la licencia."
+    },
+    "premiumModalStatusInvalidEmail": {
+        "message": "Correo electrónico no válido."
+    },
+    "premiumModalStatusInvalidLicense": {
+        "message": "Formato de licencia no válido."
+    },
+    "premiumModalStatusRateLimit": {
+        "message": "Demasiados intentos. Inténtalo más tarde."
+    },
+    "premiumModalStatusSuccess": {
+        "message": "Acceso concedido. ¡Bienvenido a Premium!"
+    },
+    "premiumModalStatusFailed": {
+        "message": "La verificación falló."
+    },
+    "premiumModalStatusUnexpected": {
+        "message": "Error inesperado."
+    },
     "extractButton": {
         "message": "Extraer"
     },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "Esta extensión es completamente de código abierto."
+    },
+    "showFeatureTour": {
+        "message": "Mostrar guía de funciones"
   }
 }

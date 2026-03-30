@@ -53,6 +53,51 @@
   "supportButton": {
     "message": "Buy Me a Coffee"
   },
+  "premiumModalSubtitle": {
+    "message": "Unlock extra features and support development."
+  },
+  "premiumModalFeature3": {
+    "message": "Priority support"
+  },
+  "premiumModalEmailPlaceholder": {
+    "message": "Email used at checkout"
+  },
+  "premiumModalLicensePlaceholder": {
+    "message": "License key"
+  },
+  "premiumModalVerifyButton": {
+    "message": "Verify"
+  },
+  "premiumModalStatusPrompt": {
+    "message": "Enter your email and license to verify."
+  },
+  "premiumModalStatusActive": {
+    "message": "Premium active. Thank you!"
+  },
+  "premiumModalStatusPending": {
+    "message": "License not verified yet."
+  },
+  "premiumModalStatusMissingFields": {
+    "message": "Email and license are required."
+  },
+  "premiumModalStatusInvalidEmail": {
+    "message": "Invalid email."
+  },
+  "premiumModalStatusInvalidLicense": {
+    "message": "Invalid license format."
+  },
+  "premiumModalStatusRateLimit": {
+    "message": "Too many attempts. Try later."
+  },
+  "premiumModalStatusSuccess": {
+    "message": "Access granted. Welcome to Premium!"
+  },
+  "premiumModalStatusFailed": {
+    "message": "Verification failed."
+  },
+  "premiumModalStatusUnexpected": {
+    "message": "Unexpected error."
+  },
   "extractButton": {
     "message": "Extract"
   },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "This extension is completely open source."
+  },
+  "showFeatureTour": {
+    "message": "Show feature tour"
   }
 }

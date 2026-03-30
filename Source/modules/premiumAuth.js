@@ -1,6 +1,41 @@
 // Premium Auth (verify, security)
 import { STORAGE_KEY_PREFIX, MAX_ATTEMPTS, ATTEMPT_WINDOW_MS, isValidEmail, isValidCode } from './premiumShared.js';
 
+const PREMIUM_MESSAGE_KEYS = {
+  missingFields: 'premiumModalStatusMissingFields',
+  invalidEmail: 'premiumModalStatusInvalidEmail',
+  invalidLicense: 'premiumModalStatusInvalidLicense',
+  rateLimit: 'premiumModalStatusRateLimit',
+  alreadyVerified: 'premiumModalStatusActive',
+  accessGranted: 'premiumModalStatusSuccess',
+  pending: 'premiumModalStatusPending',
+  failed: 'premiumModalStatusFailed',
+  unexpected: 'premiumModalStatusUnexpected',
+};
+
+function mapBackendErrorToMessageKey(error) {
+  switch (error) {
+    case 'Missing email or code':
+      return PREMIUM_MESSAGE_KEYS.missingFields;
+    case 'Invalid email':
+      return PREMIUM_MESSAGE_KEYS.invalidEmail;
+    case 'Invalid license key format':
+    case 'Invalid license format':
+      return PREMIUM_MESSAGE_KEYS.invalidLicense;
+    case 'Too many attempts':
+    case 'Too many attempts. Try again later.':
+      return PREMIUM_MESSAGE_KEYS.rateLimit;
+    case 'Email and license key mismatch':
+      return PREMIUM_MESSAGE_KEYS.failed;
+    case 'Network error':
+    case 'Unexpected API response':
+    case 'Failed to check premium status':
+      return PREMIUM_MESSAGE_KEYS.unexpected;
+    default:
+      return PREMIUM_MESSAGE_KEYS.failed;
+  }
+}
+
 // In-memory attempts (dual-layer with background storage attempts)
 const inMemoryAttempts = new Map();
 
@@ -51,13 +86,13 @@ function incrementAttempts(email) {
 export async function checkPremiumStatus(email, code) {
   try {
     if (!email || !code) {
-      return { isPremium: false, message: 'Missing email or code' };
+      return { isPremium: false, messageKey: PREMIUM_MESSAGE_KEYS.missingFields };
     }
     if (!isValidEmail(email)) {
-      return { isPremium: false, message: 'Invalid email' };
+      return { isPremium: false, messageKey: PREMIUM_MESSAGE_KEYS.invalidEmail };
     }
     if (!isValidCode(code)) {
-      return { isPremium: false, message: 'Invalid license format' };
+      return { isPremium: false, messageKey: PREMIUM_MESSAGE_KEYS.invalidLicense };
     }
 
     // Use cached premium status if still within check period
@@ -67,7 +102,7 @@ export async function checkPremiumStatus(email, code) {
     if (storedStatus?.isPremium && storedStatus?.lastChecked && now - storedStatus.lastChecked < checkPeriodMs) {
       return {
         isPremium: true,
-        message: 'Already verified',
+        messageKey: PREMIUM_MESSAGE_KEYS.alreadyVerified,
         lastChecked: storedStatus.lastChecked,
         checkPeriodDays: storedStatus.checkPeriodDays,
       };
@@ -75,7 +110,7 @@ export async function checkPremiumStatus(email, code) {
 
     // Dual-layer rate limiting
     if (!checkRateLimit(email)) {
-      return { isPremium: false, message: 'Too many attempts. Try again later.' };
+      return { isPremium: false, messageKey: PREMIUM_MESSAGE_KEYS.rateLimit };
     }
     incrementAttempts(email);
 
@@ -88,15 +123,19 @@ export async function checkPremiumStatus(email, code) {
     if (response?.success) {
       return {
         isPremium: !!response.isPremium,
-        message: response.isPremium ? 'Access granted' : 'Pending approval or inactive',
+        messageKey: response.isPremium ? PREMIUM_MESSAGE_KEYS.accessGranted : PREMIUM_MESSAGE_KEYS.pending,
         lastChecked: Date.now(),
         checkPeriodDays: response.checkPeriodDays,
       };
     }
 
-    return { isPremium: false, message: response?.error || 'Verification error' };
+    return {
+      isPremium: false,
+      messageKey: mapBackendErrorToMessageKey(response?.error),
+      message: response?.error || 'Verification error',
+    };
   } catch (error) {
     console.error('Error checking premium status:', error);
-    return { isPremium: false, message: 'Unknown error' };
+    return { isPremium: false, messageKey: PREMIUM_MESSAGE_KEYS.unexpected, message: 'Unknown error' };
   }
 }

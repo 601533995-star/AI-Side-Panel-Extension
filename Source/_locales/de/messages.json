@@ -53,6 +53,51 @@
     "supportButton": {
         "message": "Kaufen Sie mir einen Kaffee"
     },
+    "premiumModalSubtitle": {
+        "message": "Schalten Sie zusätzliche Funktionen frei und unterstützen Sie die Entwicklung."
+    },
+    "premiumModalFeature3": {
+        "message": "Prioritärer Support"
+    },
+    "premiumModalEmailPlaceholder": {
+        "message": "E-Mail, die beim Kauf verwendet wurde"
+    },
+    "premiumModalLicensePlaceholder": {
+        "message": "Lizenzschlüssel"
+    },
+    "premiumModalVerifyButton": {
+        "message": "Verifizieren"
+    },
+    "premiumModalStatusPrompt": {
+        "message": "Geben Sie Ihre E-Mail und Lizenz zur Verifizierung ein."
+    },
+    "premiumModalStatusActive": {
+        "message": "Premium ist aktiv. Danke!"
+    },
+    "premiumModalStatusPending": {
+        "message": "Lizenz noch nicht verifiziert."
+    },
+    "premiumModalStatusMissingFields": {
+        "message": "E-Mail und Lizenzschlüssel sind erforderlich."
+    },
+    "premiumModalStatusInvalidEmail": {
+        "message": "Ungültige E-Mail."
+    },
+    "premiumModalStatusInvalidLicense": {
+        "message": "Ungültiges Lizenzformat."
+    },
+    "premiumModalStatusRateLimit": {
+        "message": "Zu viele Versuche. Versuchen Sie es später erneut."
+    },
+    "premiumModalStatusSuccess": {
+        "message": "Zugriff gewährt. Willkommen bei Premium!"
+    },
+    "premiumModalStatusFailed": {
+        "message": "Verifizierung fehlgeschlagen."
+    },
+    "premiumModalStatusUnexpected": {
+        "message": "Unerwarteter Fehler."
+    },
     "extractButton": {
         "message": "Extrahieren"
     },
@@ -541,5 +586,8 @@
   },
   "onboardingSupportNote": {
     "message": "Diese Erweiterung ist vollständig quelloffen."
+    },
+    "showFeatureTour": {
+        "message": "Funktionstour anzeigen"
   }
 }
