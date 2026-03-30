@@ -182,6 +182,21 @@
     "themeSavedInfo": {
         "message": "Votre choix sera enregistré."
     },
+    "knownIssuesButton": {
+        "message": "Problèmes connus"
+    },
+    "knownIssuesTitle": {
+        "message": "Problèmes connus"
+    },
+    "knownIssuesClose": {
+        "message": "Fermer"
+    },
+    "knownIssuesItem1": {
+        "message": "Le site web de Claude a changé, donc le bouton de la barre de navigation n'est plus disponible. Nous travaillons sur une solution, mais en attendant nous avons ajouté un bouton temporaire pour ouvrir l'historique des discussions, ou vous pouvez utiliser Ctrl + K."
+    },
+    "knownIssuesItem2": {
+        "message": "Merci pour votre patience."
+    },
     "synthOptions": {
         "message": "Options Synthwave"
     },

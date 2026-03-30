@@ -179,6 +179,21 @@
     "themeSavedInfo": {
         "message": "你的选择会被保存。"
     },
+    "knownIssuesButton": {
+        "message": "已知问题"
+    },
+    "knownIssuesTitle": {
+        "message": "已知问题"
+    },
+    "knownIssuesClose": {
+        "message": "关闭"
+    },
+    "knownIssuesItem1": {
+        "message": "Claude 网站已更新，因此导航栏按钮不再可用。我们正在修复中，但在此之前，我们添加了一个用于打开聊天记录的临时按钮，或者你也可以使用 Ctrl + K。"
+    },
+    "knownIssuesItem2": {
+        "message": "感谢你的耐心等待。"
+    },
     "synthOptions": {
         "message": "合成波选项"
     },

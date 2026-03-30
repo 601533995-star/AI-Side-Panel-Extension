@@ -179,6 +179,21 @@
     "themeSavedInfo": {
         "message": "Tu elección se guarda para la próxima vez."
     },
+    "knownIssuesButton": {
+        "message": "Problemas conocidos"
+    },
+    "knownIssuesTitle": {
+        "message": "Problemas conocidos"
+    },
+    "knownIssuesClose": {
+        "message": "Cerrar"
+    },
+    "knownIssuesItem1": {
+        "message": "El sitio web de Claude cambió, por lo que el botón de la barra de navegación ya no está disponible. Estamos trabajando en una solución, pero mientras tanto añadimos un botón temporal para abrir el historial de chats, o puedes usar Ctrl + K."
+    },
+    "knownIssuesItem2": {
+        "message": "Gracias por tu paciencia."
+    },
     "synthOptions": {
         "message": "Opciones de Synthwave"
     },

@@ -179,6 +179,21 @@
     "themeSavedInfo": {
         "message": "Ihre Auswahl wird gespeichert."
     },
+    "knownIssuesButton": {
+        "message": "Bekannte Probleme"
+    },
+    "knownIssuesTitle": {
+        "message": "Bekannte Probleme"
+    },
+    "knownIssuesClose": {
+        "message": "Schließen"
+    },
+    "knownIssuesItem1": {
+        "message": "Die Website von Claude wurde geändert, daher ist die Schaltfläche in der Navigationsleiste nicht mehr verfügbar. Wir arbeiten an einer Lösung, haben aber bis dahin eine temporäre Schaltfläche zum Öffnen des Chatverlaufs hinzugefügt, oder Sie können Strg + K verwenden."
+    },
+    "knownIssuesItem2": {
+        "message": "Danke für Ihre Geduld."
+    },
     "synthOptions": {
         "message": "Synthwave‑Optionen"
     },

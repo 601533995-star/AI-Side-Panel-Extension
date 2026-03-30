@@ -179,6 +179,21 @@
   "themeSavedInfo": {
     "message": "Jūsų pasirinkimas išsaugotas kitam kartui."
   },
+  "knownIssuesButton": {
+    "message": "Žinomos problemos"
+  },
+  "knownIssuesTitle": {
+    "message": "Žinomos problemos"
+  },
+  "knownIssuesClose": {
+    "message": "Uždaryti"
+  },
+  "knownIssuesItem1": {
+    "message": "Claude svetainė pasikeitė, todėl naršymo juostos mygtukas nebeprieinamas. Dirbame ties sprendimu, o kol kas pridėjome laikiną mygtuką pokalbių istorijai atidaryti, arba galite naudoti Ctrl + K."
+  },
+  "knownIssuesItem2": {
+    "message": "Ačiū už kantrybę."
+  },
   "synthOptions": {
     "message": "Synthwave parinktys"
   },

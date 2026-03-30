@@ -179,6 +179,21 @@
     "themeSavedInfo": {
         "message": "Ваш выбор будет сохранён."
     },
+    "knownIssuesButton": {
+        "message": "Известные проблемы"
+    },
+    "knownIssuesTitle": {
+        "message": "Известные проблемы"
+    },
+    "knownIssuesClose": {
+        "message": "Закрыть"
+    },
+    "knownIssuesItem1": {
+        "message": "Сайт Claude изменился, поэтому кнопка на панели навигации больше недоступна. Мы работаем над исправлением, а пока добавили временную кнопку для открытия истории чатов, либо можно использовать Ctrl + K."
+    },
+    "knownIssuesItem2": {
+        "message": "Спасибо за ваше терпение."
+    },
     "synthOptions": {
         "message": "Опции Synthwave"
     },

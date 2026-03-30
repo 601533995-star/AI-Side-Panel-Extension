@@ -179,6 +179,21 @@
     "themeSavedInfo": {
         "message": "Seçiminiz kaydedilir."
     },
+    "knownIssuesButton": {
+        "message": "Bilinen sorunlar"
+    },
+    "knownIssuesTitle": {
+        "message": "Bilinen sorunlar"
+    },
+    "knownIssuesClose": {
+        "message": "Kapat"
+    },
+    "knownIssuesItem1": {
+        "message": "Claude'un web sitesi değişti, bu yüzden üst çubuktaki düğme artık kullanılamıyor. Bir çözüm üzerinde çalışıyoruz; bu arada sohbet geçmişini açmak için geçici bir düğme ekledik ya da Ctrl + K kullanabilirsiniz."
+    },
+    "knownIssuesItem2": {
+        "message": "Sabrınız için teşekkürler."
+    },
     "synthOptions": {
         "message": "Synthwave Seçenekleri"
     },

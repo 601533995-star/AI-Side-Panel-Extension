@@ -179,6 +179,21 @@
   "themeSavedInfo": {
     "message": "Your choice is saved for next time."
   },
+  "knownIssuesButton": {
+    "message": "Known issues"
+  },
+  "knownIssuesTitle": {
+    "message": "Known Issues"
+  },
+  "knownIssuesClose": {
+    "message": "Close"
+  },
+  "knownIssuesItem1": {
+    "message": "Claude's website changed, so the nav bar button is no longer available. We're working on a fix, but until then, we added a temporary button to open chat history, or you can use Ctrl + K."
+  },
+  "knownIssuesItem2": {
+    "message": "Thanks for your patience."
+  },
   "synthOptions": {
     "message": "Synthwave Options"
   },

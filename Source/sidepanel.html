@@ -230,17 +230,17 @@
         aria-hidden="true" aria-labelledby="known-issues-title">
         <div class="known-issues-card">
           <div class="known-issues-header">
-            <h3 id="known-issues-title" class="known-issues-title">Known
-              Issues</h3>
+            <h3 id="known-issues-title" class="known-issues-title"
+              data-i18n="knownIssuesTitle">Known Issues</h3>
             <button id="known-issues-close-btn" class="known-issues-close-btn"
-              type="button" aria-label="Close known issues">Close</button>
+              type="button" data-i18n="knownIssuesClose">Close</button>
           </div>
           <ul class="known-issues-list">
-            <li>Claude's website is changed and now nav bar button is not
-              available. We're trying to fix it, but until that time, we added
-              temporary button for open chat history, or you can use Ctrl + K
-              command.</li>
-            <li>Thanks for patient.</li>
+            <li data-i18n="knownIssuesItem1">Claude's website changed, so
+              the nav bar button is no longer available. We're working on a
+              fix, but until then, we added a temporary button to open chat
+              history, or you can use Ctrl + K.</li>
+            <li data-i18n="knownIssuesItem2">Thanks for your patience.</li>
           </ul>
         </div>
       </div>
@@ -413,7 +413,7 @@
               <circle cx="8" cy="11.7" r=".6" fill="currentColor"
                 stroke="none" />
             </svg>
-            Known issues
+            <span data-i18n="knownIssuesButton">Known issues</span>
           </button>
 
           <!-- Try on Mobile Section -->
