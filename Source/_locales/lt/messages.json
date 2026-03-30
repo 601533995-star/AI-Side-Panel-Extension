@@ -440,4 +440,91 @@
   "navbarZoomXLarge": {
     "message": "Labai didelis (130%)"
   }
+,   "onboardingBrandName": {
+    "message": "AI Side Panel"
+  },
+  "onboardingSkipBtn": {
+    "message": "Praleisti"
+  },
+  "onboardingStep1Label": {
+    "message": "1 žingsnis iš 5"
+  },
+  "onboardingHeadline1": {
+    "message": "Momentinė prieiga prie DI"
+  },
+  "onboardingBody1": {
+    "message": "Mėgaukitės sklandžiu naršymu su mūsų šoninio skydelio integracija. Naudokite padalyto ekrano režimą, kad naršytumėte ir kalbėtumėte vienu metu."
+  },
+  "onboardingChip1": {
+    "message": "Aktyvuokite per piktogramą arba ALT + Q"
+  },
+  "onboardingStep2Label": {
+    "message": "2 žingsnis iš 5"
+  },
+  "onboardingHeadline2": {
+    "message": "Naršykite ir kalbėkite vienu metu"
+  },
+  "onboardingBody2": {
+    "message": "Atidarykite padalytą ekraną, kad matytumėte tinklalapį ir DI greta vienas kito. Vilkite centrinį skyriklį, kad pritaikytumėte kiekvieno skydelio dydį."
+  },
+  "onboardingChip2": {
+    "message": "Vilkite skyriklį, kad sureguliuotumėte padalijimo proporciją"
+  },
+  "onboardingStep3Label": {
+    "message": "3 žingsnis iš 5"
+  },
+  "onboardingHeadline3": {
+    "message": "Jūsų taisyklės, jūsų įrankiai"
+  },
+  "onboardingBody3": {
+    "message": "Palaiko visas populiarias DI paslaugas. Vilkite ir numeskite, kad pritaikytumėte išdėstymą, arba pridėkite savas per pasirinktinių paslaugų palaikymą."
+  },
+  "onboardingChip3": {
+    "message": "Išmanusis turinio išgavimas automatiškai sutvarko straipsnius"
+  },
+  "onboardingStep4Label": {
+    "message": "4 žingsnis iš 5"
+  },
+  "onboardingHeadline4": {
+    "message": "Dirbkite protingiau"
+  },
+  "onboardingBody4": {
+    "message": "Dešiniuoju pelės mygtuku spustelėkite bet kokį tekstą, kad akimirksniu nusiųstumėte jį DI per kontekstinį meniu. Naršykite greičiau su užklausų istorija."
+  },
+  "onboardingChip4": {
+    "message": "Pilnas navigacijos klaviatūra palaikymas"
+  },
+  "onboardingStep5Label": {
+    "message": "5 žingsnis iš 5"
+  },
+  "onboardingHeadline5": {
+    "message": "Atrakinkite pokalbių centrą"
+  },
+  "onboardingBody5": {
+    "message": "Išnaudokite DI patirtį maksimaliai. Pereikite prie Premium, kad atrakintumėte pokalbių centrą."
+  },
+  "onboardingFeature1": {
+    "message": "Ieškokite visų pokalbių vienoje vietoje"
+  },
+  "onboardingFeature2": {
+    "message": "Išskirtinis temų parinkiklis ir pasirinktiniai stiliai"
+  },
+  "onboardingFeature3": {
+    "message": "Paremkite švietimą ir tolesnį vystymą"
+  },
+  "onboardingNextBtn": {
+    "message": "Kitas"
+  },
+  "onboardingBackBtnTitle": {
+    "message": "Atgal"
+  },
+  "onboardingGoPremiumBtn": {
+    "message": "Pereiti prie Premium"
+  },
+  "onboardingGetStartedBtn": {
+    "message": "Pradėti"
+  },
+  "onboardingSupportNote": {
+    "message": "Šis plėtinys yra visiškai atviro kodo."
+  }
 }

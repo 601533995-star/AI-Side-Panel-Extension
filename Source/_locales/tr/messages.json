@@ -440,4 +440,91 @@
     "navbarZoomXLarge": {
         "message": "Çok Büyük (130%)"
     }
+,  "onboardingBrandName": {
+    "message": "AI Side Panel"
+  },
+  "onboardingSkipBtn": {
+    "message": "Atla"
+  },
+  "onboardingStep1Label": {
+    "message": "Adım 1 / 5"
+  },
+  "onboardingHeadline1": {
+    "message": "Anında Yapay Zekâ Erişimi"
+  },
+  "onboardingBody1": {
+    "message": "Yan panel entegrasyonuyla kesintisiz gezinti deneyimi yaşayın. Bölünmüş Ekran modunu kullanarak aynı anda hem web'de gezinin hem de sohbet edin."
+  },
+  "onboardingChip1": {
+    "message": "Simge veya ALT + Q ile etkinleştirin"
+  },
+  "onboardingStep2Label": {
+    "message": "Adım 2 / 5"
+  },
+  "onboardingHeadline2": {
+    "message": "Gezin ve Aynı Anda Sohbet Edin"
+  },
+  "onboardingBody2": {
+    "message": "Bir web sayfasını ve yapay zekânızı yan yana tutmak için Bölünmüş Ekran'ı açın. Ortadaki ayırıcıyı sürükleyerek her panelin boyutunu istediğiniz gibi ayarlayın."
+  },
+  "onboardingChip2": {
+    "message": "Bölme oranını ayarlamak için ayırıcıyı sürükleyin"
+  },
+  "onboardingStep3Label": {
+    "message": "Adım 3 / 5"
+  },
+  "onboardingHeadline3": {
+    "message": "Kurallarınız, Araçlarınız"
+  },
+  "onboardingBody3": {
+    "message": "Tüm popüler yapay zekâ hizmetlerini destekler. Düzeninizi özelleştirmek için sürükleyip bırakın veya Özel Hizmet Desteği ile kendinizinkini ekleyin."
+  },
+  "onboardingChip3": {
+    "message": "Akıllı içerik çıkarma, makaleleri otomatik olarak temizler"
+  },
+  "onboardingStep4Label": {
+    "message": "Adım 4 / 5"
+  },
+  "onboardingHeadline4": {
+    "message": "Daha Akıllı Çalışın"
+  },
+  "onboardingBody4": {
+    "message": "Herhangi bir metne sağ tıklayarak Bağlam Menüsü ile anında yapay zekânıza gönderin. İstem Geçmişi ile daha hızlı gezinin."
+  },
+  "onboardingChip4": {
+    "message": "Tam klavye navigasyon desteği"
+  },
+  "onboardingStep5Label": {
+    "message": "Adım 5 / 5"
+  },
+  "onboardingHeadline5": {
+    "message": "Sohbet Merkezini Açın"
+  },
+  "onboardingBody5": {
+    "message": "Yapay zekâ deneyiminizden en iyi şekilde yararlanın. Sohbet Merkezi'ni açmak için Premium'a yükseltin."
+  },
+  "onboardingFeature1": {
+    "message": "Tüm sohbetleri tek bir yerde arayın"
+  },
+  "onboardingFeature2": {
+    "message": "Özel Tema Seçici ve özel stiller"
+  },
+  "onboardingFeature3": {
+    "message": "Eğitimi ve gelecekteki geliştirmeyi destekleyin"
+  },
+  "onboardingNextBtn": {
+    "message": "İleri"
+  },
+  "onboardingBackBtnTitle": {
+    "message": "Geri"
+  },
+  "onboardingGoPremiumBtn": {
+    "message": "Premium'a Geç"
+  },
+  "onboardingGetStartedBtn": {
+    "message": "Başlayın"
+  },
+  "onboardingSupportNote": {
+    "message": "Bu eklenti tamamen açık kaynaklıdır."
+  }
 }

@@ -439,5 +439,92 @@
     },
     "navbarZoomXLarge": {
         "message": "Очень большая (130%)"
+    },
+    "onboardingBrandName": {
+        "message": "AI Side Panel"
+    },
+    "onboardingSkipBtn": {
+        "message": "Пропустить"
+    },
+    "onboardingStep1Label": {
+        "message": "Шаг 1 из 5"
+    },
+    "onboardingHeadline1": {
+        "message": "Мгновенный доступ к ИИ"
+    },
+    "onboardingBody1": {
+        "message": "Удобный просмотр веб-страниц с интеграцией боковой панели. Используйте режим разделённого экрана, чтобы просматривать сайты и общаться с ИИ одновременно."
+    },
+    "onboardingChip1": {
+        "message": "Активируйте через значок или ALT + Q"
+    },
+    "onboardingStep2Label": {
+        "message": "Шаг 2 из 5"
+    },
+    "onboardingHeadline2": {
+        "message": "Просмотр и чат одновременно"
+    },
+    "onboardingBody2": {
+        "message": "Откройте разделённый экран, чтобы держать веб-страницу и ИИ рядом. Перетащите центральный разделитель, чтобы настроить размер каждой панели."
+    },
+    "onboardingChip2": {
+        "message": "Перетащите разделитель для настройки пропорций"
+    },
+    "onboardingStep3Label": {
+        "message": "Шаг 3 из 5"
+    },
+    "onboardingHeadline3": {
+        "message": "Ваши правила, ваши инструменты"
+    },
+    "onboardingBody3": {
+        "message": "Поддержка всех популярных ИИ-сервисов. Перетаскивайте элементы для настройки расположения или добавляйте собственные через поддержку пользовательских сервисов."
+    },
+    "onboardingChip3": {
+        "message": "Умное извлечение автоматически очищает статьи"
+    },
+    "onboardingStep4Label": {
+        "message": "Шаг 4 из 5"
+    },
+    "onboardingHeadline4": {
+        "message": "Работайте эффективнее"
+    },
+    "onboardingBody4": {
+        "message": "Щёлкните правой кнопкой мыши по любому тексту, чтобы мгновенно отправить его в ИИ через контекстное меню. Ускорьте работу с помощью истории запросов."
+    },
+    "onboardingChip4": {
+        "message": "Полная поддержка навигации с клавиатуры"
+    },
+    "onboardingStep5Label": {
+        "message": "Шаг 5 из 5"
+    },
+    "onboardingHeadline5": {
+        "message": "Откройте Центр диалогов"
+    },
+    "onboardingBody5": {
+        "message": "Получите максимум от работы с ИИ. Перейдите на Premium, чтобы разблокировать Центр диалогов."
+    },
+    "onboardingFeature1": {
+        "message": "Поиск по всем диалогам в одном месте"
+    },
+    "onboardingFeature2": {
+        "message": "Эксклюзивный выбор тем и пользовательские стили"
+    },
+    "onboardingFeature3": {
+        "message": "Поддержка развития и будущих обновлений"
+    },
+    "onboardingNextBtn": {
+        "message": "Далее"
+    },
+    "onboardingBackBtnTitle": {
+        "message": "Назад"
+    },
+    "onboardingGoPremiumBtn": {
+        "message": "Перейти на Premium"
+    },
+    "onboardingGetStartedBtn": {
+        "message": "Начать"
+    },
+    "onboardingSupportNote": {
+        "message": "Это расширение полностью с открытым исходным кодом."
     }
 }

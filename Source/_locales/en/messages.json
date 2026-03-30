@@ -439,5 +439,92 @@
   },
   "navbarZoomXLarge": {
     "message": "X&#8209;Large (130%)"
+  },
+  "onboardingBrandName": {
+    "message": "AI Side Panel"
+  },
+  "onboardingSkipBtn": {
+    "message": "Skip"
+  },
+  "onboardingStep1Label": {
+    "message": "Step 1 of 5"
+  },
+  "onboardingHeadline1": {
+    "message": "Instant AI Access"
+  },
+  "onboardingBody1": {
+    "message": "Experience seamless browsing with our Side Panel integration. Use Split Screen Workflow to browse and chat simultaneously."
+  },
+  "onboardingChip1": {
+    "message": "Activate via icon or ALT + Q"
+  },
+  "onboardingStep2Label": {
+    "message": "Step 2 of 5"
+  },
+  "onboardingHeadline2": {
+    "message": "Browse & Chat at Once"
+  },
+  "onboardingBody2": {
+    "message": "Open Split Screen to keep a web page and your AI side-by-side. Drag the center handle to resize each panel to your liking."
+  },
+  "onboardingChip2": {
+    "message": "Drag the divider to adjust the split ratio"
+  },
+  "onboardingStep3Label": {
+    "message": "Step 3 of 5"
+  },
+  "onboardingHeadline3": {
+    "message": "Your Rules, Your Tools"
+  },
+  "onboardingBody3": {
+    "message": "Supports all popular AI services. Drag and drop to customize your layout, or add your own via Custom Service Support."
+  },
+  "onboardingChip3": {
+    "message": "Smart content extraction cleans articles automatically"
+  },
+  "onboardingStep4Label": {
+    "message": "Step 4 of 5"
+  },
+  "onboardingHeadline4": {
+    "message": "Work Smarter"
+  },
+  "onboardingBody4": {
+    "message": "Right-click any text to send it to your AI instantly with Context Menu. Navigate faster with Prompt History."
+  },
+  "onboardingChip4": {
+    "message": "Full keyboard navigation support"
+  },
+  "onboardingStep5Label": {
+    "message": "Step 5 of 5"
+  },
+  "onboardingHeadline5": {
+    "message": "Unlock Conversation Hub"
+  },
+  "onboardingBody5": {
+    "message": "Get the most out of your AI experience. Upgrade to Premium to unlock Conversation Hub."
+  },
+  "onboardingFeature1": {
+    "message": "Search all conversations in one place"
+  },
+  "onboardingFeature2": {
+    "message": "Exclusive Theme Selector & custom styles"
+  },
+  "onboardingFeature3": {
+    "message": "Support education & future development"
+  },
+  "onboardingNextBtn": {
+    "message": "Next"
+  },
+  "onboardingBackBtnTitle": {
+    "message": "Back"
+  },
+  "onboardingGoPremiumBtn": {
+    "message": "Go Premium"
+  },
+  "onboardingGetStartedBtn": {
+    "message": "Get Started"
+  },
+  "onboardingSupportNote": {
+    "message": "This extension is completely open source."
   }
 }

@@ -440,4 +440,91 @@
     "navbarZoomXLarge": {
         "message": "超大 (130%)"
     }
+,  "onboardingBrandName": {
+    "message": "AI Side Panel"
+  },
+  "onboardingSkipBtn": {
+    "message": "跳过"
+  },
+  "onboardingStep1Label": {
+    "message": "第 1 步，共 5 步"
+  },
+  "onboardingHeadline1": {
+    "message": "即时访问 AI"
+  },
+  "onboardingBody1": {
+    "message": "通过侧边栏集成享受无缝浏览体验。使用分屏工作流，同时浏览网页和与 AI 对话。"
+  },
+  "onboardingChip1": {
+    "message": "通过图标或 ALT + Q 激活"
+  },
+  "onboardingStep2Label": {
+    "message": "第 2 步，共 5 步"
+  },
+  "onboardingHeadline2": {
+    "message": "浏览与对话同步进行"
+  },
+  "onboardingBody2": {
+    "message": "打开分屏模式，让网页和 AI 并排显示。拖动中间的分隔条，按需调整每个面板的大小。"
+  },
+  "onboardingChip2": {
+    "message": "拖动分隔条调整分屏比例"
+  },
+  "onboardingStep3Label": {
+    "message": "第 3 步，共 5 步"
+  },
+  "onboardingHeadline3": {
+    "message": "你的规则，你的工具"
+  },
+  "onboardingBody3": {
+    "message": "支持所有主流 AI 服务。拖放自定义布局，或通过自定义服务支持添加您自己的服务。"
+  },
+  "onboardingChip3": {
+    "message": "智能内容提取自动清理文章"
+  },
+  "onboardingStep4Label": {
+    "message": "第 4 步，共 5 步"
+  },
+  "onboardingHeadline4": {
+    "message": "更聪明地工作"
+  },
+  "onboardingBody4": {
+    "message": "右键点击任意文本，通过右键菜单即时发送给 AI。利用提示词历史记录更快速地导航。"
+  },
+  "onboardingChip4": {
+    "message": "全面支持键盘导航"
+  },
+  "onboardingStep5Label": {
+    "message": "第 5 步，共 5 步"
+  },
+  "onboardingHeadline5": {
+    "message": "解锁对话中心"
+  },
+  "onboardingBody5": {
+    "message": "充分发挥 AI 体验的潜力。升级至 Premium 以解锁对话中心。"
+  },
+  "onboardingFeature1": {
+    "message": "在一处搜索所有对话"
+  },
+  "onboardingFeature2": {
+    "message": "专属主题选择器和自定义样式"
+  },
+  "onboardingFeature3": {
+    "message": "支持教育与未来开发"
+  },
+  "onboardingNextBtn": {
+    "message": "下一步"
+  },
+  "onboardingBackBtnTitle": {
+    "message": "返回"
+  },
+  "onboardingGoPremiumBtn": {
+    "message": "升级至 Premium"
+  },
+  "onboardingGetStartedBtn": {
+    "message": "开始使用"
+  },
+  "onboardingSupportNote": {
+    "message": "此扩展程序完全开源。"
+  }
 }

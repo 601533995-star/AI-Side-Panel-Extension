@@ -440,4 +440,91 @@
     "navbarZoomXLarge": {
         "message": "Muy grande (130%)"
     }
+,  "onboardingBrandName": {
+    "message": "AI Side Panel"
+  },
+  "onboardingSkipBtn": {
+    "message": "Omitir"
+  },
+  "onboardingStep1Label": {
+    "message": "Paso 1 de 5"
+  },
+  "onboardingHeadline1": {
+    "message": "Acceso instantáneo a la IA"
+  },
+  "onboardingBody1": {
+    "message": "Disfruta de una navegación fluida con nuestra integración de panel lateral. Usa el modo de pantalla dividida para navegar y chatear simultáneamente."
+  },
+  "onboardingChip1": {
+    "message": "Actívalo con el icono o ALT + Q"
+  },
+  "onboardingStep2Label": {
+    "message": "Paso 2 de 5"
+  },
+  "onboardingHeadline2": {
+    "message": "Navega y chatea a la vez"
+  },
+  "onboardingBody2": {
+    "message": "Abre la pantalla dividida para tener una página web y tu IA lado a lado. Arrastra el divisor central para ajustar el tamaño de cada panel a tu gusto."
+  },
+  "onboardingChip2": {
+    "message": "Arrastra el divisor para ajustar la proporción"
+  },
+  "onboardingStep3Label": {
+    "message": "Paso 3 de 5"
+  },
+  "onboardingHeadline3": {
+    "message": "Tus reglas, tus herramientas"
+  },
+  "onboardingBody3": {
+    "message": "Compatible con todos los servicios de IA populares. Arrastra y suelta para personalizar tu diseño, o añade los tuyos propios mediante el soporte de servicios personalizados."
+  },
+  "onboardingChip3": {
+    "message": "La extracción inteligente limpia artículos automáticamente"
+  },
+  "onboardingStep4Label": {
+    "message": "Paso 4 de 5"
+  },
+  "onboardingHeadline4": {
+    "message": "Trabaja de forma más inteligente"
+  },
+  "onboardingBody4": {
+    "message": "Haz clic derecho en cualquier texto para enviarlo a tu IA al instante con el menú contextual. Navega más rápido con el historial de consultas."
+  },
+  "onboardingChip4": {
+    "message": "Navegación completa con teclado"
+  },
+  "onboardingStep5Label": {
+    "message": "Paso 5 de 5"
+  },
+  "onboardingHeadline5": {
+    "message": "Desbloquea el Centro de conversaciones"
+  },
+  "onboardingBody5": {
+    "message": "Saca el máximo provecho de tu experiencia con IA. Pasa a Premium para desbloquear el Centro de conversaciones."
+  },
+  "onboardingFeature1": {
+    "message": "Busca todas las conversaciones en un solo lugar"
+  },
+  "onboardingFeature2": {
+    "message": "Selector de temas exclusivo y estilos personalizados"
+  },
+  "onboardingFeature3": {
+    "message": "Apoya la educación y el desarrollo futuro"
+  },
+  "onboardingNextBtn": {
+    "message": "Siguiente"
+  },
+  "onboardingBackBtnTitle": {
+    "message": "Atrás"
+  },
+  "onboardingGoPremiumBtn": {
+    "message": "Hazte Premium"
+  },
+  "onboardingGetStartedBtn": {
+    "message": "Comenzar"
+  },
+  "onboardingSupportNote": {
+    "message": "Esta extensión es completamente de código abierto."
+  }
 }

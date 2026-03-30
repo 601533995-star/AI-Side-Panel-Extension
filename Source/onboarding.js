@@ -5,6 +5,34 @@
   const slides  = document.querySelectorAll('.slide');
   const skipBtn = document.getElementById('skipBtn');
 
+  /* Localize onboarding text from _locales messages */
+  function localizeOnboarding() {
+    if (!chrome?.i18n) return;
+
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      const key = element.getAttribute('data-i18n');
+      if (!key) return;
+      const value = chrome.i18n.getMessage(key);
+      if (value) element.innerHTML = value;
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (!key) return;
+      const value = chrome.i18n.getMessage(key);
+      if (value) element.setAttribute('placeholder', value);
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+      const key = element.getAttribute('data-i18n-title');
+      if (!key) return;
+      const value = chrome.i18n.getMessage(key);
+      if (value) element.setAttribute('title', value);
+    });
+  }
+
+  localizeOnboarding();
+
   /* Navigate to a specific index */
   function goTo(idx) {
     if (idx < 0 || idx >= TOTAL) return;
